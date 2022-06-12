@@ -1,0 +1,3774 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="bootstrap.css">
+
+    <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="shortcut icon"
+      href="https://billingregister.com/favicon.ico"
+      type="image/x-icon"
+    />
+
+    <link rel="stylesheet" href="font-awesome.min.css">
+
+    <link rel="stylesheet" href="ninja-slider.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>
+      Billing Register - Billing/Inventory/Accounting/CRM/Barcoding Software for
+      Retail, Wholesale, Supermarket, Trading, Manufacturing, Engineering,
+      Services Business.
+    </title>
+
+    <style>
+      h1,h2,h3.h4,h5,h6{
+        text-align: center;
+      }
+      .div{
+        text-align: center;
+      }
+      .navbar{
+        height: 60px;
+        background-color: #000;
+        display: block;
+      }
+      .navbar-fixed-top{
+        height: 60px;
+        background-color: #000;
+        display: block;
+        text-align: center;
+      }
+      .logo-size{
+        width: 40px;
+        display: inline-block;
+        float: left;
+        margin-left: 10px;
+        margin-top: 5px;
+      }
+      .navbar-collapse{
+        width: 60%;
+        float: left;
+        margin-top: -3px;
+      }
+      @media (max-width: 767px){
+        .navbar-nav{
+          margin-top: 0;
+          display: block;
+          color: white;
+          background-color: #000;
+          float: right;
+        }
+        .navbar-collapse{
+          width: 98%;
+          position: relative;
+          bottom: 37px;
+        }
+      }
+      .navbar-toggle{
+        width: 50px;
+        float: right;
+        left: 15px;
+      }
+      .navbar-brand{
+        color: white;
+        display: inline-block;
+        float: left;
+        font-size: 25px;
+        margin-left: -5px;
+      }
+      .navbar-brand:hover,.navbar-brand:focus{
+        color: #54ee23;
+      }
+      @media (max-width: 480px) {
+        h1 a.navbar-brand {
+          font-size: 17px;
+          color: #fff;
+          font-weight: 400;
+          text-shadow: none;
+          margin-left: 2px;
+        }
+      }
+      @media (max-width: 354px) {
+        h1 a.navbar-brand {
+          font-size: 17px;
+          color: #fff;
+          font-weight: 400;
+          text-shadow: none;
+          margin-left: 2px;
+          position: relative;
+          right: 10px;
+        }
+      }
+      .navbar-contact-button{
+        float: right;
+        border: 1px solid white;
+        padding: 1px 8px;
+        border-radius: 5px;
+        margin-right: 10px;
+        margin-top: 13px;
+        color: #fff;
+        text-transform: uppercase;
+      }
+      .navbar-contact-button:hover a,.navbar-contact-button:focus a{
+        color: #54ee23;
+        text-decoration: none;
+      }
+      .navbar-nav{
+        display: inline-block;
+        color: white;
+      }
+      .navbar-nav li a:hover{
+        color: #54ee23;
+      }
+      @media (max-width: 767px){
+        .navbar-nav{
+          margin-top: 0;
+          display: block;
+          color: white;
+          background-color: #000;
+          float: right;
+        }
+        .navbar-nav li a{
+          padding-right: 70px;
+          text-transform: uppercase;
+          border-bottom: 1px solid white;
+        }
+      }
+      @media (min-width: 768px){
+        .navbar-nav > li > a {
+            padding-top: 30px;
+            padding-bottom: 15px;
+            text-transform: uppercase;
+        }
+      }
+      @media (max-width: 768px){
+        .navbar.navbar-collapse{
+          float: right;
+        }
+        .navbar.navbar-collapse{
+          display: block;
+        }
+        .navbar-contact-button{
+          float: right;
+          display: inline-block;
+          position: relative;
+          bottom: 59px;
+          right: 45px;
+        }
+      }
+      .li-1 {
+        background-color: black;
+        padding-top: 3px;
+        padding-left: 20px;
+        padding-right: 20px;
+        color: white;
+        line-height: 1.42857143;
+        margin-left: 23.5vw;
+        width: 198px;
+        height: 26px;
+        font-size: 14px;
+        color: rgb(34 197 94);
+      }
+      .li-2 {
+        background-color: black;
+        padding-left: 20px;
+        padding-right: 20px;
+        color: white;
+        line-height: 1.42857143;
+        margin-left: 23.5vw;
+        width: 198px;
+        height: 26px;
+        font-size: 14px;
+        color: white;
+        display: inline-block;
+      }
+      .li-3 {
+        background-color: black;
+        padding-bottom: 3px;
+        padding-left: 20px;
+        padding-right: 20px;
+        color: white;
+        line-height: 1.42857143;
+        margin-left: 23.5vw;
+        width: 198px;
+        height: 26px;
+        font-size: 14px;
+        color: white;
+      }
+      li.indicator {
+        height: 12px;
+        width: 12px;
+        border: 2px solid #3a8f6c;
+        border-radius: 10px;
+        margin: 1px;
+      }
+      .active {
+        background-color: white;
+      }
+      h1.section-header-2-heading {
+        font-size: 2.25em;
+        color: #1cbda2;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      div.sale-order-heading-line {
+        font-size: 2.25em;
+        color: #1cbda2;
+        max-width: 6em;
+        border-bottom: 2px solid #1cbda2;
+        margin: 0 auto;
+      }
+      p.section-2-subheading {
+        color: #1cbda2;
+        text-align: center;
+        font-size: 23px;
+        padding-top: 20px;
+        margin: 0 10px;
+      }
+      p.text-1 {
+        margin: 0 15px 10px;
+        font-size: 18px;
+        text-align: justify;
+      }
+      div.highlights-border {
+        border: 2px solid #6495ed;
+        padding: 20px 25px 5px 25px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        color: #777;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 1.5em;
+      }
+      @media (max-width: 539px){
+        div.highlights-border {
+          border: 2px solid #6495ed;
+          padding: 20px 0 5px 0;
+          border-radius: 5px;
+          margin-bottom: 20px;
+          color: #777;
+          font-weight: 300;
+          font-size: 16px;
+          line-height: 1.5em;
+        }
+      }
+      h1.section-2-header-3 {
+        font-size: 40px;
+        margin-bottom: 20px;
+        color: #6495ed;
+        font-weight: 400;
+        text-align: center;
+      }
+      h1.section-2-header-3 {
+        font-size: 40px;
+        margin-bottom: 20px;
+        color: #6495ed;
+        font-weight: 400;
+        text-align: center;
+      }
+      @media (max-width: 539px){
+        h1.section-2-header-3 {
+          font-size: 32px;
+          margin-bottom: 10px;
+          color: #6495ed;
+          font-weight: 400;
+          text-align: center;
+        }
+      }
+      /* li.navbar-contact-button {
+        float: right;
+        margin-top: 18px;
+        line-height: 0;
+        margin-right: 10px;
+        background-color: #000;
+        border: none;
+        padding: 10px 8px;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+        border: 1.5px solid #fff;
+        border-radius: 5px;
+      }*/
+      div.highlights-heading-line {
+        margin: 0 auto;
+        width: 15em;
+        padding: 0 0;
+        border-bottom: 2px solid #6495ed;
+      }
+      div.highlights {
+        padding-right: 15px;
+        width: 100%;
+      }
+      @media (max-width: 489px){
+        div.highlights {
+          padding: 0px;
+          width: 100%;
+        }
+      }
+      div.column-1 {
+        margin-left: 6%;	
+        text-align: left;  
+        display: inline-block;
+      }
+      div.column-2 {
+        margin-left: 6%;	
+        float: right;  
+        display: inline-block;
+      }
+      @media (max-width: 1277px){
+        div.column-2 {
+          margin-left: 6%;	
+          float: left;
+        }
+      }
+      @media (max-width: 459px){
+        div.column-1 {
+          margin-left:2%;	
+          float: left;
+        }
+        div.column-2 {
+          margin-left:2%;	
+          float: left;
+        }
+      }
+      li.li-class {
+        color: #4d4d4d;
+        font-family: Georgia, sans-serif;
+        font-size: 17.5px;
+        line-height: 23px;
+        padding-bottom: 10px;
+        margin-bottom: 5px;
+        width: 100%;
+        list-style: url(https://billingregister.com/img/camera.png);
+      }
+      @media (max-width: 639px){
+        li.li-class{
+          font-size: 16px;
+        }
+      }
+      @media (max-width: 565px){
+        li.li-class{
+          font-size: 15px;
+        }
+      }
+      @media (max-width: 396px){
+        li.li-class{
+          font-size: 14px;
+        }
+      }
+      .hrli-1 {
+        border: 1px solid blue;
+        width: 84%;
+        margin: 10px 166px 20px -20px;
+      }
+      .hrli-2 {
+        border: 1px solid blue;
+        width: 84%;
+        margin: 10px 166px 20px -20px;
+      }
+      @media (max-width: 1277px){
+        .hrli-1{
+          width: 160%;
+        }
+        .hrli-2{
+          width: 160%;
+        }
+      }
+      @media (max-width: 1023px){
+        .hrli-1{
+          width: 110%;
+        }
+        .hrli-2{
+          width: 110%;
+        }
+      }
+      @media (max-width: 767px){
+        .hrli-1{
+          width: 100%;
+        }
+        .hrli-2{
+          width: 100%;
+        }
+      }
+      @media (max-width: 459px){
+        .hrli-1{
+          position: relative;
+          left: 20px;
+        }
+        .hrli-2{
+          position: relative;
+          left: 20px;
+        }
+      }
+      @media (max-width: 425px){
+        .hrli-1{
+          width: 98%;
+        }
+        .hrli-2{
+          width: 98%;
+        }
+      }
+      .video-align {
+        position: relative;
+        min-height: 1px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 10px;
+      }
+      @media (max-width: 420px){
+        .video-align {
+          position: relative;
+          min-height: 1px;
+          margin-left: auto;
+          margin-right: auto;
+          padding-left: 0px;
+          padding-right: 0px;
+          padding-bottom: 0px;
+        }
+      }
+      .installation-video {
+        display: inline-block;
+        font-size: 11px;
+        width: 346px;
+        height: 195px;
+      }
+      @media (max-width: 402px){
+        iframe.installation-video {
+          display: inline-block;
+          font-size: 11px;
+          width: 312px;
+          height: 195px;
+        }
+      }
+      @media (max-width: 360px){
+        iframe.installation-video {
+          display: inline-block;
+          font-size: 11px;
+          width: 292px;
+          height: 195px;
+        }
+      }
+      .p-text-style {
+        text-align: justify!important;
+        margin: 0 15px 10px;
+        color: #4d4d4d;
+        font-size: 18px;
+        font-weight: 300;
+        font-family: Georgia, sans-serif;
+      }
+      .sale-order-1 {
+        margin-bottom: 10px;
+      }
+      @media (max-width: 1274px){
+        .sale-order-1 {
+          margin-bottom: 10px;
+          width: 100%;
+        }  
+      }
+      .sale-order-line-wrap-1 {
+        font-family: "Titillium Web", Helvetica, Arial, sans-serif;
+        color: #777;
+        font-size: 16px;
+        line-height: 1.5em;
+        font-weight: 300;
+        text-shadow: none;
+        border: 2px solid #2a88c8;
+        border-radius: 5px;
+      }
+      .sale-order-line-wrap-2 {
+        font-family: "Titillium Web", Helvetica, Arial, sans-serif;
+        color: #777;
+        font-size: 16px;
+        line-height: 1.5em;
+        font-weight: 300;
+        text-shadow: none;
+        border: 2px solid #2a88c8;
+        border-radius: 5px;
+      }
+      .sale-order-line-wrap-3 {
+        font-family: "Titillium Web", Helvetica, Arial, sans-serif;
+        color: #777;
+        font-size: 16px;
+        line-height: 1.5em;
+        font-weight: 300;
+        text-shadow: none;
+        border: 2px solid #2a88c8;
+        border-radius: 5px;
+      }
+      ul.align-left {
+        text-align: left;
+        padding: 30px 5px 7px 30px;
+        list-style-image: url("camera.png");
+      }
+      .sale-processing-col {
+        font-family: "Titillium Web", Helvetica, Arial, sans-serif;
+        color: #777;
+        font-size: 16px;
+        line-height: 1.5em;
+        font-weight: 300;
+        text-shadow: none;
+      }
+      .heading-style-1 {
+        font-size: 22px;
+        line-height: 100%;
+        font-weight: 600;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+        list-style: none;
+        text-align: center;
+        color: #2a88c8;
+        font-family: "Montserrat", sans-serif;
+        position: relative;
+        right: 10px;
+      }
+      .heading-style-2 {
+        font-size: 22px;
+        line-height: 100%;
+        font-weight: 600;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+        list-style: none;
+        text-align: center;
+        color: #1cbda2;
+        font-family: "Montserrat", sans-serif;
+        position: relative;
+        right: 10px;
+      }
+      .li-style-1 {
+        font-size: 18px;
+        line-height: 23px;
+        padding-bottom: 15px;
+        margin-bottom: 12.2px;
+        color: #4d4d4d;
+      }
+      @media (max-width: 1274px){
+        .li-style-1 {
+        font-size: 18px;
+        line-height: 23px;
+        padding-bottom: 16.5px;
+        margin-bottom: 5px;
+        color: #4d4d4d;
+        }
+      }
+      .li-style-2 {
+        font-size: 18px;
+        line-height: 23px;
+        padding-bottom: 12.8px;
+        margin-bottom: 12.8px;
+        color: #4d4d4d;
+      }
+      @media (max-width: 1274px){
+        .li-style-2 {
+        font-size: 18px;
+        line-height: 23px;
+        padding-bottom: 16.5px;
+        margin-bottom: 5px;
+        color: #4d4d4d;
+        }
+      }
+      .li-style-3 {
+        font-size: 18px;
+        line-height: 23px;
+        padding-bottom: 16.2px;
+        margin-bottom: 5px;
+        color: #4d4d4d;
+      }
+      @media (max-width: 1274px){
+        .li-style-3 {
+          font-size: 18px;
+          line-height: 23px;
+          padding-bottom: 16.5px;
+          margin-bottom: 5px;
+          color: #4d4d4d;
+        }
+      }
+      .li-style-load-items{
+        font-size: 18px;
+        line-height: 23px;
+        padding-bottom: 10px;
+        margin-bottom: 5px;
+        color: #4d4d4d;
+        font-family: Georgia, sans-serif;
+        margin-left: 5px;
+        list-style-image: url(https://billingregister.com/img/camera.png);
+      }
+      .sale-processing-icon{
+        height: 100px;
+        width: 100px;
+        margin: 0 auto;
+        border: 2px solid #2a88c8;
+        border-radius: 5px;
+        position: relative;
+        right: 10px;
+      }
+      .sale-processing-icon2{
+        height: 100px;
+        width: 100px;
+        margin: 0 auto;
+        border: 2px solid #1cbda2;
+        border-radius: 5px;
+        position: relative;
+        right: 10px;
+      }
+      figure{
+        list-style-image: url('camera.png');
+
+      }
+      .fa-laptop{
+        font-size: 4.5em;
+        text-align: center;
+        line-height: 100px;
+        margin: 0 auto;
+        color: #2a88c8;
+        display: inline-block;        
+        list-style-image: url('camera.png');
+        box-sizing: border-box;
+        height: 100px;
+        width: 100px;
+      }
+      .fa-money{
+        font-size: 4.5em;
+        text-align: center;
+        line-height: 100px;
+        margin: 0 auto;
+        color: #1cbda2;
+        display: inline-block;
+        list-style-image: url('camera.png');
+        box-sizing: border-box;
+        height: 100px;
+        width: 100px;
+      }
+      .fa-truck{
+        font-size: 4.5em;
+        text-align: center;
+        line-height: 100px;
+        margin: 0 auto;
+        color: #2a88c8;
+        display: inline-block;        
+        list-style-image: url('camera.png');
+        box-sizing: border-box;
+        height: 100px;
+        width: 100px;
+      }
+      #misc1{
+        padding-top: 90px;
+        box-sizing: border-box;
+      }
+      .container{
+        overflow: hidden;
+      }
+      .content{
+        overflow: hidden;
+      }
+      .row{
+        z-index: 9999;
+      }
+      .source-col{
+        padding: 40px 20px;
+        margin: 0 auto;
+        margin-bottom: 40px;
+      }
+      .figure-border-1{
+        border: 3px solid rgb(7, 85, 12);
+        height: 134px;
+        width: 140px;
+        margin: 0 auto;
+      }
+      .figure-border-2{
+        border: 3px solid rgb(7, 85, 12);
+        height: 134px;
+        width: 140px;
+        margin: 0 auto;
+      }
+      .figure-border-3{
+        border: 3px solid rgb(7, 85, 12);
+        height: 134px;
+        width: 140px;
+        margin: 0 auto;
+      }
+      .fa-calendar{
+        font-size: 80px;
+        color: #417630;
+        display: inline-block;        
+        list-style-image: url('camera.png');
+        box-sizing: border-box;
+        text-align: center;
+        position: relative;
+        padding-left: 31px;
+        padding-top: 22px;
+      }
+      .fa-search{
+        font-size: 80px;
+        line-height: 100px;
+        color: #417630;
+        display: inline-block;        
+        list-style-image: url('camera.png');
+        box-sizing: border-box;
+        text-align: center;
+        position: relative;
+        padding-left: 28px;
+        padding-top: 15px;
+      }
+      .fa-barcode{
+        font-size: 80px;
+        line-height: 100px;
+        color: #417630;
+        display: inline-block;        
+        list-style-image: url('camera.png');
+        box-sizing: border-box;
+        padding-left: 28px;
+        padding-top: 17px;
+      }
+      .source-col:hover{
+        background-color: #dfe8db;
+      }
+      .heading-style-4 {
+        font-size: 25px;
+        line-height: 100%;
+        font-weight: 600;
+        padding-top: 30px;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+        list-style: none;
+        color: #417630;
+        font-family: "Montserrat", sans-serif;
+        text-align: center;
+      }
+      .heading-style-5 {
+        font-size: 25px;
+        line-height: 100%;
+        font-weight: 600;
+        padding-top: 30px;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+        list-style: none;
+        color: #417630;
+        font-family: "Montserrat", sans-serif;
+        text-align: center;
+      }
+      .heading-style-6{
+        font-size: 25px;
+        line-height: 100%;
+        font-weight: 600;
+        padding-top: 30px;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+        list-style: none;
+        color: #417630;
+        font-family: "Montserrat", sans-serif;
+        text-align: center;
+      }
+      .source-col-text{
+        font-size: 18px;
+        color: rgb(83, 82, 82);
+        font-family: Georgia, sans-serif;
+        text-align: justify;
+      }
+      .scrolldown{
+        position: fixed;
+        bottom: 10px;
+        right: 15px;
+        cursor: pointer;
+        font-size: 20px;
+        background-color: #90baa9;
+        color: white;
+        height: 40px;
+        width: 40px;
+        text-align: center;
+        padding-top: 7px;
+      }
+      .scrolldown:hover{
+        position: fixed;
+        bottom: 10px;
+        right: 15px;
+        cursor: pointer;
+        font-size: 20px;
+        background-color: #3B906E;
+        color: white;
+        height: 40px;
+        width: 40px;
+        text-align: center;
+        padding-top: 10px;
+      }
+      .scrollup{
+        position: fixed;
+        right: 15px;
+        top: 70px;
+        cursor: pointer;
+        font-size: 20px;
+        background-color: #90baa9;
+        color: white;
+        height: 40px;
+        width: 40px;
+        text-align: center;
+        padding-top: 7px;
+      }
+      .scrollup:hover{
+        position: fixed;
+        right: 15px;
+        top: 70px;
+        cursor: pointer;
+        font-size: 20px;
+        background-color: #3B906E;
+        color: white;
+        height: 40px;
+        width: 40px;
+        text-align: center;
+        padding-top: 10px;
+      }
+      .sec-header-3{
+        color: #e85342;
+        text-align: center;
+        font-size: 40px;
+        margin-bottom: 20px;
+      }
+      .red-heading-line{
+        margin: 0 auto;
+        width: 12em;
+        height: 2px;
+        background-color: #e85342;
+      }
+      .list-invoice-carousel{
+        border: 2px solid #e85342;
+        padding: 10px 0;
+        padding-left: 40px;
+        padding-right: 40px;
+        margin-bottom: 90px;
+        border-radius: 5px;
+      }
+      @media (max-width: 1262px){
+        .list-invoice-carousel{
+          border: 2px solid #e85342;
+          padding: 10px 0;
+          margin-bottom: 90px;
+          border-radius: 5px;
+        }
+      }
+      .list-invoice-carousel-height{
+        height: 760px;
+      }
+      @media (max-width: 1050px){
+        .list-invoice-carousel-height{
+          height: 1407px;
+        }
+      }
+      .sec-3-list{
+        background-color: #ededed;
+        list-style-image: url(https://billingregister.com/img/list-bullet.png);
+        font-size: 18px;
+        line-height: 23px;
+        margin-top: 15px;
+        margin-bottom: 7px;
+        margin-left: 31px;
+        color: #4d4d4d;
+        font-family: Georgia, sans-serif;
+        float: right;
+        line-height: 46.5px;
+      }
+      /* .sec-3-list-height-width{
+        height: 730px;
+        width: 420px;
+      }
+      @media (max-width: 1050px){
+        .sec-3-list-height-width{
+          width: 702px;
+          height: 590px;
+        }
+      }
+      @media (max-width: 767px){
+        .sec-3-list-height-width{
+          width: 570px;
+          height: 590px;
+        }
+      }
+      @media (max-width: 639px){
+        .sec-3-list-height-width{
+          width: 491px;
+          height: 606px;
+        }
+      }
+      @media (max-width: 561px){
+        .sec-3-list-height-width{
+          width: 477px;
+          height: 614px;
+        }
+      }
+      @media (max-width: 547px){
+        .sec-3-list-height-width{
+          width: 477px;
+          height: 614px;
+        }
+      } */
+      .carousel{
+        position: relative;
+      }
+      .carousel_image{
+        margin: 0 auto;
+        width: 80%;
+      }
+      .carousel_track {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        height: 100%;
+        position: relative;
+        transition: transform 250ms ease-in;
+      }
+      .track-container{
+        overflow: hidden;
+      }
+      .carousel_slide{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+      }
+      .carousel_button{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        border: 0;
+      }
+      .carousel_button--left{
+        left: 0;
+        cursor: pointer;
+      }
+      .carousel_button--right{
+        right: 0;
+        cursor: pointer;
+      }
+      .carousel_button img {
+        width: 30px;
+        top: 50%;
+      }
+      h1{
+        font-size: 40px;
+      }
+      h1,h2,h3,h4,h5,h6{
+        margin: 0 0 20px 0;
+        font-style: normal;
+      }
+      .second{
+        padding-top: 70px;
+      }
+      .calculation-of-discounts-heading{
+        color: #1cbda2;
+        text-align: center;
+      }
+      .calculation-of-discounts-hr-1{
+        width: 15em;
+        margin: 0 auto;
+        border-bottom: 2px solid #1cbda2;
+        background-color: #1cbda2;
+      }
+      .calculation-of-discounts-subheading{
+        margin: 0 10px;
+        color: #1cbda2;
+        padding-top: 20px;
+        font-size: 20px;
+        text-align: center;
+      }
+      .calculation-of-discounts-paragraph{
+        text-align: justify;
+        margin-left: 15px;
+        margin-right: 15px;
+        color: #4d4d4d;
+        font-size: 18px;
+        font-weight: 300;
+        font-family: Georgia, sans-serif;
+        padding-top: 20px;
+        padding-bottom: 23px;
+      }
+      .sec-4{
+        margin: 0 auto;
+      }
+      div.load-items-into-sale-orders{
+        border: 2px solid #1cbda2;
+        border-radius: 5px;
+        height: 730px;
+        width: 47%;
+        position: relative;
+        left: 0px;
+        margin: 0 auto;
+        margin-left: 30px;
+        margin-bottom: 30px;
+      }
+      @media (max-width: 1254px){
+        div.load-items-into-sale-orders{
+          border: 2px solid #1cbda2;
+          border-radius: 5px;
+          height: 730px;
+          width: 70%;
+          position: relative;
+          margin-left: 80px;
+          margin: 0 auto;
+          margin-bottom: 30px;
+        }
+      }
+      @media (max-width: 664px){
+        div.load-items-into-sale-orders{
+          border: 2px solid #1cbda2;
+          border-radius: 5px;
+          height: 740px;
+          width: 80%;
+          position: relative;
+          left: 0px;
+          margin: 0 auto;
+          margin-bottom: 30px;
+        }
+      }
+      @media (max-width: 574px){
+        div.load-items-into-sale-orders{
+          border: 2px solid #1cbda2;
+          border-radius: 5px;
+          height: 740px;
+          width: 90%;
+          position: relative;
+          left: 0px;
+          margin: 0 auto;
+          margin-bottom: 30px;
+        }
+      }
+      @media (max-width: 505px){
+        div.load-items-into-sale-orders{
+          border: 2px solid #1cbda2;
+          border-radius: 5px;
+          height: 740px;
+          width: 100%;
+          position: relative;
+          left: 0px;
+          margin: 0 auto;
+          margin-bottom: 30px;
+        }
+      }
+      .load-items-into-sale-orders-lists{
+        margin: 0 70px;
+      }
+      @media (max-width: 1300px){
+        .load-items-into-sale-orders-lists{
+          margin: 0 20px;
+        }
+      }
+      @media (max-width: 1210px){
+        .load-items-into-sale-orders-lists{
+          margin: 0 0px;
+        }
+      }
+      @media (max-width: 1200px){
+        .load-items-into-sale-orders-lists{
+          margin: 0 auto;
+        }
+      }
+      .load-items{
+        padding: 30px 10px 0 22px;
+      }
+      .img-load-items{
+        margin-left: 55px;
+        margin-right: 55px;
+        border: 2px solid #1cbda2;
+      }
+      .heading-style-load-items{
+        font-size: 22px;
+        color: #1cbda2;
+        font-weight: 500;
+        list-style: none;
+        line-height: 30px;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+      .calculation-of-discounts-hr-2{
+        max-width: 7em;
+        padding: 0 0.625em;
+        border-bottom: 2px solid #1cbda2;
+        list-style: none;
+        margin: 0 auto;
+        margin-top: -7px;
+        background-color: #1cbda2;
+      }
+      p.load-items-p-style{
+        font-size: 18px;
+        line-height: 25px;
+        padding-bottom: 10px;
+        margin-bottom: 5px;
+        color: #686868;
+        font-family: Georgia, sans-serif;
+        margin-left: -10px;
+        margin-right: 10px;
+        text-align: justify;
+        font-weight: 300;
+      }
+      .section-4{
+        margin-top: 70px;
+      }
+      p{
+        margin: 0 0 10px;
+      }
+      .handles-all-sales-taxes-border{
+        border: 2px solid #c19366;
+        border-radius: 5px;
+      }
+      .handles-all-sales-taxes-color{
+        color: #c19366;
+        text-align: center;
+      }
+      .handles-all-sales-taxes-line{
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 44px;
+        max-width: 15em;
+        border-bottom: 2px solid #c19366;
+      }
+      .handles-all-sales-taxes-p-text-style{
+        text-align:justify!important;
+        margin-left: 0; 
+        margin-right: 0;
+        color: #4d4d4d;
+        font-size: 18px;
+        font-weight: 300;	
+        font-family: Georgia, sans-serif;
+      }
+      .handles-all-sales-taxes{
+        padding-top: 15px;
+        text-align: justify!important;
+        color: #4d4d4d;
+        font-size: 18px;
+        font-weight: 300;
+        font-family: Georgia, sans-serif;
+      }
+      @media (max-width: 1190px){
+        .handles-all-sales-taxes{
+          padding-top: 15px;
+          text-align: justify!important;
+          color: #4d4d4d;
+          font-size: 18px;
+          font-weight: 300;
+          font-family: Georgia, sans-serif;
+          width: auto;
+        }
+      }
+      .handles-all-sales-taxes-li{
+        margin-bottom: 14.5px;
+        list-style-image: url(https://billingregister.com/img/right-arrow.png);
+      }
+      #handles-all-sales-taxes{
+        padding-bottom: 20px;
+      }
+      #wide-inventory-options{
+        padding-top: 70px;
+        padding-bottom: 20px;
+      }
+      .wide-inventory-options-header{
+        margin-top: 10px;
+        text-align: center;
+      }
+      .wide-inventory-options-heading-color{
+        color: #1cbda2;
+      }
+      .wide-inventory-options-hr{
+        border-bottom: 2px solid #1cbda2;
+        width: 15em;
+        margin: 0 auto;
+      }
+      .sale-order-2 {
+        min-height: 1px;
+        padding-right: 0;
+        padding-left: 0;
+        margin-bottom: 10px;
+      }
+      .wide-inventory-options-padding2 ul{
+        border: 2px solid #1CBDA2;
+        border-radius: 5px;
+        text-align: left;
+        padding: 30px 0 0 0;
+        background: none;
+        list-style: url(https://billingregister.com/img/camera.png);
+      }
+      .wide-inventory-options-padding3 ul{
+        border: 2px solid #1CBDA2;
+        border-radius: 5px;
+        text-align: left;
+        padding: 30px 0 0 0;
+        background: none;
+        list-style: url(https://billingregister.com/img/camera.png);
+        margin-left: 30px;
+      }
+      @media (max-width: 1257px){
+        .wide-inventory-options-padding3 ul{
+          border: 2px solid #1CBDA2;
+          border-radius: 5px;
+          text-align: left;
+          padding: 30px 0 0 0;
+          background: none;
+          list-style: url(https://billingregister.com/img/camera.png);
+          margin-left: 0;
+        }
+      }
+      .wide-inventory-options-img2{
+        height: 251px;
+        width: 300px;
+        margin: 0 auto;
+        border: 2px solid #1cbda2;
+        border-radius: 5px;
+      }
+      .wide-inventory-options-img3{
+        height: 251px;
+        width: 300px;
+        margin: 0 auto;
+        border: 2px solid #2A88C8;
+        border-radius: 5px;
+      }
+      .item-detail-header-1{
+        color: #2A88C8;
+        font-size: 20px;
+        font-weight: bold;
+        list-style: none; 
+        text-align: center;
+      }
+      .item-detail-header-2{
+        color: #1cbda2;
+        font-size: 20px;
+        font-weight: bold;
+        list-style: none; 
+        text-align: center;
+      }
+      .item-detail-space{
+        height: 5px;
+        list-style: none;
+      }
+      .item-detail-hr-1{
+        max-width: 7em;
+        border-bottom: 2px solid #1cbda2;
+        color: #1cbda2;
+        list-style: none;
+        text-align: center;
+        margin: 0 auto;
+      }
+      .item-detail-hr-2{
+        max-width: 7em;
+        border-bottom: 2px solid #2A88C8;
+        color: #2A88C8;
+        list-style: none;
+        text-align: center;
+        margin: 0 auto;
+      }
+      .wide-inventory-options-padding2 ul li {
+        font-size: 18px;
+        line-height: 23px;
+        padding-bottom: 5px;
+        margin-bottom: 9.3px;
+        margin-left: 30px;
+        color: #4d4d4d;
+      }
+      .wide-inventory-options-padding3 ul li {
+        font-size: 18px;
+        line-height: 23px;
+        padding-bottom: 5px;
+        margin-bottom: 7px;
+        margin-left: 30px;
+        color: #4d4d4d;
+      }
+			.allign-center{
+				text-align: center;
+				padding-top: 0;
+			}
+      #customer-management{
+        padding-top: 70px;
+      }
+      .section{
+        margin: 0;
+        padding: 40px 0 20px 0;
+      }
+      .left-right-mrg{
+        margin-left: 0;
+        margin-right: 0;
+      }
+      .customer-management-border{
+        border: 2px solid #c19366;
+        padding: 20px 20px 10px 20px;
+        text-align: justify;
+        border-radius: 5px;
+      }
+      @media (max-width: 767px){
+        .customer-management-border{
+          border: 2px solid #c19366;
+          padding: 0;
+          text-align: justify;
+          border-radius: 5px;
+        }
+      }
+      .customer-management-header{
+        padding-top: 17px;
+        color: #c19366;
+        text-align: center;
+      }
+      .customer-management-line{
+        border-bottom: 2px solid #c19366;
+        max-width: 15em;
+        margin: 0 auto;
+      }
+      .customer-management-p-text-style{
+        text-align: justify!important;
+        margin-right: 15px;
+        margin-left: 15px;
+        color: #4d4d4d;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 25px;
+        padding-bottom: 10px;
+        margin-bottom: 5px;
+        font-family: Georgia, sans-serif;
+      }
+      .customer-management-ul-1{
+        text-align: left;
+        padding-top: 0;
+        background: none;
+        list-style-image: url(https://billingregister.com/img/right-arrow.png);
+      }
+      @media (max-width: 1297px){
+        .customer-management-ul-1{
+          text-align: left;
+          padding-top: 0;
+          background: none;
+          list-style-image: url(https://billingregister.com/img/right-arrow.png);
+          width: 100%;
+        }
+      }
+      .customer-management-ul-1 li{
+        font-size: 18px;
+        line-height: 23px;
+        padding-bottom: 11.5px;
+        margin-bottom: 1px;
+        color: #4d4d4d;
+        font-family: Georgia, sans-serif;
+        margin-left: 40px;
+      }
+      .customer-management-ul-2{
+        text-align: left;
+        padding-top: 0;
+        background: none;
+        list-style-image: url(https://billingregister.com/img/right-arrow.png);
+      }
+      @media (max-width: 1297px){
+        .customer-management-ul-2{
+          text-align: left;
+          padding-top: 0;
+          background: none;
+          list-style-image: url(https://billingregister.com/img/right-arrow.png);
+          width: 100%;
+        }
+      }
+      .customer-management-ul-2 li{
+        font-size: 18px;
+        line-height: 23px;
+        padding-bottom: 10px;
+        margin-bottom: 1px;
+        color: #4d4d4d;
+        font-family: Georgia, sans-serif;
+        margin-left: 40px;
+      }
+      #grow-with-targeted-marketing{
+        padding-top: 70px;
+        padding-bottom: 20px;
+      }
+      .grow-with-targeted-marketing-border{
+        border: 2px solid #c19366;
+        border-radius: 5px;
+        padding: 20px 15px 10px 20px;
+      }
+      @media (max-width: 767px){
+        .grow-with-targeted-marketing-border{
+          border: 2px solid #c19366;
+          border-radius: 5px;
+          padding: 0;
+        }
+      }
+      .grow-with-targeted-marketing-line{
+        margin: 0 auto;
+        max-width: 15em;
+        padding: 0 0;
+        border-bottom: 2px solid #c19366;
+      }
+      .grow-with-targeted-marketing-header{
+        color: #c19366;
+        text-align: center;
+      }
+      .grow-with-targeted-marketing-p-text-style{
+        text-align: justify!important;
+        margin-right: 0;
+        margin-left: 0;
+        color: #4d4d4d;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 25px;
+        padding-bottom: 10px;
+        margin-bottom: 5px;
+        font-family: Georgia, sans-serif;
+      }
+      .grow-with-targeted-marketing ul{
+        padding-left: 40px;
+        margin-bottom: 10px;
+        text-align: left;
+        padding-top: 0;
+        background: none;
+        list-style-image: url(https://billingregister.com/img/right-arrow.png);
+      }
+      .grow-with-targeted-marketing ul li{
+        margin-right: 0;
+        margin-left: 0;
+        color: #4d4d4d;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 25px;
+        padding-bottom: 10px;
+        margin-bottom: 5px;
+        font-family: Georgia, sans-serif;
+      }
+      #globe-is-the-limit{
+        padding-top: 70px;
+        padding-bottom: 15px;
+      }
+      .globe-is-the-limit-line-wrap.globe-is-the-limit-padding1 ul{
+        border: 2px solid #2a88c8;
+        border-radius: 5px;
+        padding: 30px 5px 0 0;
+        background: none;
+        list-style: url(https://billingregister.com/img/camera.png);
+        line-height: 28px;
+      }
+      .globe-is-the-limit-line-wrap.globe-is-the-limit-padding2 ul{
+        border: 2px solid #1cbda2;
+        border-radius: 5px;
+        padding: 30px 5px 0 0;
+        background: none;
+        list-style: url(https://billingregister.com/img/camera.png);
+      }
+      .globe-is-the-limit-img1{
+        margin: 0 auto;
+        border: 2px solid #1cbda2;
+        height: 236px;
+        width: 276px;
+      }
+      .globe-is-the-limit-img2{
+        margin: 0 auto;
+        border: 2px solid #2a88c8;
+        height: 236px;
+        width: 276px;
+      }
+      .line-head-row-1{
+        color: #2a88c8;
+        font-size: 20px;
+        font-weight: 600;
+        list-style: none;
+        text-align: center;
+        margin-bottom: 6px;
+      }
+      .line-head-row-2{
+        color: #1cbda2;
+        font-size: 20px;
+        font-weight: 600;
+        list-style: none;
+        text-align: center;
+        margin-bottom: 6px;
+      }
+      .heading-line-row-1{
+        border-bottom: 2px solid #2a88c8;
+        width: 8em;
+        margin: 0 auto 25px;
+        list-style: none;
+      }
+      .heading-line-row-2{
+        border-bottom: 2px solid #1cbda2;
+        width: 8em;
+        margin: 0 auto 25px;
+        list-style: none;
+      }
+      .globe-is-the-limit-p-text-style-1{
+        color: #4d4d4d;
+        font-weight: 300;
+        font-size: 18px;
+        margin-left: 30.5px;
+        margin-bottom: 8px;
+      }
+      .globe-is-the-limit-p-text-style-2{
+        color: #4d4d4d;
+        font-weight: 300;
+        font-size: 18px;
+        margin-left: 30.5px;
+        margin-bottom: 9.5px;
+      }
+      .globe-is-the-limit-p-text-style-3{
+        color: #4d4d4d;
+        font-weight: 300;
+        font-size: 18px;
+        margin-left: 30.5px;
+        margin-bottom: 13.7px;
+      }
+      #employee-management{
+        padding-top: 70px;
+        padding-bottom: 20px;
+      }
+      .employee-management-border{
+        border: 2px solid #c19366;
+        border-radius: 5px;
+        padding: 10px 20px;
+      }
+      .employee-management-header{
+        color: #c19366;
+        text-align: center;
+      }
+      .employee-management-hr{
+        border-bottom: 2px solid #c19366;
+        width: 15em;
+        margin: 0 auto;
+      }
+      img{
+        vertical-align: middle;
+      }
+      .employee-management-li-p-text-style{
+        font-size: 18px;
+        font-weight: 300;
+        list-style: url(https://billingregister.com/img/right-arrow.png);
+        font-family: Georgia, sans-serif;
+        margin-bottom: 16px;
+      }
+      #coupon-sticker-label-printing{
+        padding-top: 70px;
+        padding-bottom: 20px;
+      }
+      .coupon-sticker-label-printing-header{
+        color: #e85342;
+        text-align: center;
+      }
+      .coupon-sticker-label-printing-hr{
+        border-bottom: 2px solid #e85342;
+        width: 15em;
+        margin: 0 auto 20px;
+      }
+      .coupon-sticker-label-printing-carousel{
+        height: 585px;
+        border: 2px solid #e85342;
+        border-radius: 5px;
+      }
+      #robust-book-keeping{
+        padding-top: 70px;
+        padding-bottom: 20px;
+      }
+      .robust-book-keeping-border{
+        border: 2px solid #53ac0a;
+        border-radius: 5px;
+        padding: 20px 20px 10px 20px;
+      }
+      .robust-book-keeping-header{
+        text-align: center;
+        color: #53ac0a;
+      }
+      .robust-book-keeping-hr{
+        border-bottom: 2px solid #53ac0a;
+        margin: 0 auto;
+        width: 15em;
+      }
+      .robust-book-keeping-img{
+        margin-top: 20px;
+      }
+      .robust-book-keeping-list{
+        float: right;
+        margin-top: 20px;
+      }
+      .robust-book-keeping-li-p-text-style{
+        list-style: url(https://billingregister.com/img/camera.png);
+        font-size: 18px;
+        line-height: 23px;
+        padding-bottom: 13px;
+        margin-bottom: 5px;
+        color: #4d4d4d;
+        font-family: Georgia, sans-serif;
+        margin-right: 0;
+      }
+      #price{
+        padding-top: 70px;
+        padding-bottom: 20px;
+      }
+      .price-padding1{
+        border: 2px solid #1cbda2;
+        border-radius: 5px;
+        text-align: center;
+        list-style: none;
+        margin-left: -15px;
+        padding: 20px 10px 10px 22px;
+        margin-bottom: 20px;
+      }
+      .price-heading-1{
+        font-size: 25px;
+        color: #1cbda2;
+        font-weight: 600;
+        list-style: none;
+        line-height: 30px;
+        margin: 0 auto 0.5em;
+      }
+      .price-hr-1{
+        max-width: 7em;
+        padding: 0 0.625em;
+        border-bottom: 2px solid #1cbda2;
+        list-style: none;
+        margin: 0 auto;
+      }
+      .price ul li{
+        font-family: Georgia, sans-serif;
+      }
+      .price-p-text-style{
+        color: #2cc185;
+        font-size: 18px;
+        font-weight: 300;
+        font-family: Georgia, sans-serif;
+        padding-bottom: 10px;
+      }
+      .price-p-style2{
+        font-size: 16px;
+        line-height: 25px;
+        padding-top: 10px;
+        color: #686868;
+        font-family: Georgia, sans-serif;
+        margin: 0 auto;
+        text-align: center;
+        font-weight: 300;
+      }
+      .price-bottom-text-style{
+        margin-top: 10px;
+        font-size: 13px;
+        font-weight: 300;
+        color: #152E63;
+        text-align: center;
+      }
+      .price-img{
+        height: 100px;
+        width: 100px;
+        margin: 0 auto;
+      }
+      .price-padding{
+        padding: 20px 5px 10px 5px;
+        margin-bottom: 20px;
+        border: 2px solid #1cbda2;
+        border-radius: 5px;
+        text-align: justify;
+      }
+      @media (max-width: 768px){
+        .price-list1{
+          padding-left: 0;
+          padding-right: 0;
+        }
+      }
+      .price-list1-header{
+        font-size: 26px;
+        font-family: georgia, sans-serif;
+        font-weight: 600;
+        text-align: center;
+        color: #1cbda2;
+        padding-bottom: 5px;
+      }
+      .price-list1-hr{
+        border-bottom: 2px solid #1cbda2;
+        width: 5em;
+        margin: 0 auto;
+        padding-bottom: 5px;
+      }
+      .price-list1-sub-heading{
+        text-align: center;
+        font-size: 18px;
+        color: #1cbda2;
+        font-family: georgia, sans-serif;
+        padding-bottom: 5px;
+      }
+      .price-paypal-style{
+        margin-bottom: 10px;
+        width: 50%;
+        background-color: #F9EBC3;
+        border: 2px solid black;
+        margin: 0 auto;
+        padding: 30px 0 10px;
+        margin-bottom: 10px;
+        border-radius: 7px;
+        text-align: center;
+      }
+      @media (max-width: 768px){
+        .price-paypal-style{
+          margin-bottom: 10px;
+          width: 60%;
+          background-color: #F9EBC3;
+          border: 2px solid black;
+          margin: 0 auto;
+          padding: 30px 0 10px;
+          margin-bottom: 10px;
+          border-radius: 7px;
+          text-align: center;
+        }
+      }
+      .price-paypal-style:hover{
+        margin-bottom: 10px;
+        width: 50%;
+        background-color: #F4D889;
+        border: 2px solid black;
+        margin: 0 auto;
+        padding: 30px 0 10px;
+        margin-bottom: 10px;
+        border-radius: 7px;
+        text-shadow: 2px 2px 5px red;
+      }
+      @media (max-width: 768px){
+        .price-paypal-style:hover{
+          margin-bottom: 10px;
+          width: 60%;
+          background-color: #F4D889;
+          border: 2px solid black;
+          margin: 0 auto;
+          padding: 30px 0 10px;
+          margin-bottom: 10px;
+          border-radius: 7px;
+          text-shadow: 2px 2px 5px red;
+        }
+      }
+      .price-paypal-style2{
+        width: 50%;
+        background-color: #F9EBC3;
+        border: 2px solid black;
+        margin: 0 auto;
+        padding-top: 10px;
+        border-radius: 5px;
+        margin-bottom: 10px;
+      }
+      @media (max-width: 768px){
+        .price-paypal-style2{
+          width: 60%;
+          background-color: #F9EBC3;
+          border: 2px solid black;
+          margin: 0 auto;
+          padding-top: 10px;
+          border-radius: 5px;
+          margin-bottom: 10px;
+        }
+      }
+      .price-paypal-style2:hover{
+        width: 50%;
+        background-color: #F4D889;
+        border: 2px solid black;
+        margin: 0 auto;
+        padding-top: 10px;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        text-shadow: 2px 2px 5px red;
+      }
+      @media (max-width: 768px){
+        .price-paypal-style2:hover{
+          width: 60%;
+          background-color: #F4D889;
+          border: 2px solid black;
+          margin: 0 auto;
+          padding-top: 10px;
+          border-radius: 5px;
+          margin-bottom: 10px;
+          text-shadow: 2px 2px 5px red;
+        }
+      }
+      .price-p-style2{
+        font-style: 16px;
+        padding-top: 10px;
+        color: #686868;
+        font-family: Georgia, sans-serif;
+        margin: 0 auto;
+        text-align: center;
+        font-weight: 300;
+      }
+      .price-p-style{
+        font-style: 16px;
+        padding-top: 10px;
+        padding-bottom: 20px;
+        color: #686868;
+        font-family: Georgia, sans-serif;
+        margin: 0 auto;
+        text-align: center;
+        font-weight: 300;
+      }
+      .price-list1-paragraph{
+        font-size: 13px;
+      }
+      #contact{
+        padding-bottom: 20px;
+      }
+      .contact-border{
+        border: 2px solid #1fa75c;
+        padding: 20px 20px 10px 20px;
+        border-radius: 5px;
+      }
+      .contact-header{
+        text-align: center;
+        color: #1fa75c;
+        padding-bottom: 23px;
+      }
+      .contact-hr{
+        border-bottom: 2px solid #1fa75c;
+        width: 15em;
+        margin: 0 auto;
+      }
+      .contact-subheading{
+        text-align: center;
+        color: #1fa75c;
+        font-size: 19.5px;
+        font-family: Georgia, sans-serif;
+        padding-bottom: 30px;
+      }
+      .contact-lists{
+        margin-left: 15%;
+        list-style: url(https://billingregister.com/img/camera.png);
+        padding-bottom: 30px;
+      }
+      @media (max-width: 768px){
+        .contact-lists{
+            margin-left: 1%;
+        }
+      }
+      @media only screen and (max-width: 480px){
+        .contact-lists{
+          margin-left: -1%;
+        }
+      }
+      .contact-li-p-text-style{
+        font-size: 18px;
+        line-height: 20px;
+        padding-bottom: 10px;
+        margin-bottom: 5px;
+        color: #4d4d4d;
+        font-family: Georgia, sans-serif;
+        margin-right: 0;
+      }
+      .contact-img{
+        margin-bottom: 20px;
+      }
+      .contact-paragraph{
+        font-size: 18px;
+        color: #4d4d4d;
+        font-family: Georgia, sans-serif;
+        margin-right: 0;
+        text-align:justify;
+      }
+      @media (max-width: 768px){
+        .contact-paragraph{
+          font-size: 18px;
+          color: #4d4d4d;
+          font-family: Georgia, sans-serif;
+          margin-right: 0;
+          padding-right: 0;
+          padding-left: 0;
+          text-align:justify;
+        }
+      }
+      @media (max-width: 768px){
+        .padding{
+          padding-left: 0;
+          padding-right: 0;
+        }
+      }
+      .contact-a-style{
+        color: #1fa75c;
+        text-decoration: underline;
+      }
+      .contact-a-style:hover{
+        color: #0c6c37;
+        text-decoration: none;
+      }
+      #customization{
+        padding-top: 70px;
+        padding-bottom: 20px;
+      }
+      .customization-padding{
+        border: 2px solid #283593;
+        border-radius: 5px;
+        padding: 20px 20px 10px 20px;
+      }
+      .customization-header{
+        color: #283593;
+        text-align: center;
+      }
+      .customization-hr{
+        border-bottom: 2px solid #283593;
+        width: 15em;
+        margin: 0 auto;
+      }
+      .customization-sub-heading{
+        color: #283593;
+        font-size: 19px;
+        font-family: Georgia, sans-serif;
+        padding-top: 20px;
+        text-align: center;
+      }
+      .customization-lists{
+        margin-left: 15%;
+        list-style: url(https://billingregister.com/img/career-dot.png);
+      }
+      @media (max-width: 768px){
+        .customization-lists{
+          margin-left: 2%;
+          list-style: url(https://billingregister.com/img/career-dot.png);
+        }  
+      }
+      .customization-li-text-style{
+        font-size: 18px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+      }
+      @media (max-width:768px){
+        .customization-li-text-style{
+          font-size: 18px;
+          font-family: Georgia, 'Times New Roman', Times, serif;
+          padding-bottom: 10px;
+          margin-bottom: 5px;
+          line-height: 20px;
+        }
+      }
+      .customization-img1{
+        padding-top: 30px;
+        padding-bottom: 26px;
+        width: 90%;
+        margin-left: 15px;
+      }
+      .customization-p-text-style{
+        font-size: 17.5px;
+        text-align: justify;
+        padding-top: 30px;
+        font-family: Georgia, sans-serif;
+        color: rgb(84, 84, 84);
+      }
+      #downloads{
+        padding-top: 70px;
+        padding-bottom: 20px;
+      }
+      .downloads-padding{
+        border: 2px solid #283593;
+        border-radius: 5px;
+      }
+      @media (max-width: 350px){
+        .downloads-padding{
+          padding-right: 0;
+          padding-left: 0;
+        }
+      }
+      .downloads-hr{
+        margin: 0 auto;
+        width: 15em;
+        border-bottom: 2px solid #283593;
+      }
+      .downloads1-mrg{
+        margin-top: 20px;
+        text-align: center;
+      }
+      .downloads1-mrg-header{
+        color: #025784;
+        font-family: Cambria;
+        font-size: 28px;
+        font-weight: 500;
+        text-align: center;
+      }
+      .downloads1-mrg-header:hover{
+        color: #0191df;
+        padding-bottom: 10px;
+        margin-bottom: 2px;
+        font-family: Cambria;
+        font-size: 28px;
+        font-weight: 500;
+        text-align: center;
+      }
+
+      .downloads1 ul{
+        padding-top: 5px;
+      }
+      .downloads2 ul{
+        padding-top: 8px;
+      }
+      .files-links ul.files-links-list1{
+        list-style: url(https://billingregister.com/img/career-dot.png);
+        margin-left: 40px;
+        position: relative;
+        width: 450px;
+      }
+      @media (max-width: 1267px){
+        .files-links ul.files-links-list1{
+          list-style: url(https://billingregister.com/img/career-dot.png);
+          margin-left: 40px;
+          position: relative;
+          bottom: 0;
+          margin-bottom: 13px;
+          width: auto;
+        }
+      }
+      .files-links ul.files-links-list2{
+        list-style: url(https://billingregister.com/img/career-dot.png);
+        margin-left: 110px;
+      }
+      @media (max-width: 1267px){
+        .files-links ul.files-links-list2{
+          list-style: url(https://billingregister.com/img/career-dot.png);
+          margin-left: 40px;
+        }
+      }
+      .downloads1 ul li{
+        padding-top: 5px;
+        background: none;
+        list-style: none;
+        text-align: center;
+      }
+      li.downloads2-li{
+        list-style: url(https://billingregister.com/img/career-dot.png);
+        margin-left: 40px;
+        font-size: 22px;
+        margin-bottom: 2px;
+        padding-bottom: 0px;
+        font-family: Cambria;
+      }
+      .downloads1-header{
+        padding-bottom: 10px;
+        margin-bottom: 2px;
+        color: #025784;
+        font-family: Cambria;
+      }
+      .downloads2-header{
+        padding-bottom: 20px;
+        margin-bottom: 2px;
+        color: #025784;
+        font-family: Cambria;
+        font-size: 28px;
+        list-style: none;
+      }
+      .files-links-header{
+        font-size: 22px;
+        text-align: center;
+        color: #025784;
+        padding-bottom: 15px;
+        padding-top: 50px;
+        list-style: none;
+      }
+      .downloads1-header:hover{
+        padding-bottom: 10px;
+        margin-bottom: 2px;
+        color: #027ec1;
+        font-family: Cambria;
+      }
+      .br-red-style{
+        text-align: center;
+        font-style: italic;
+        text-transform: uppercase;
+        font-size: 17px;
+        color: #FD773D;
+        font-weight: 500;
+        line-height: 10px!important;
+        padding-bottom: 10px;
+        margin-bottom: 2px;
+        font-family: Cambria;
+      }
+      .br-red-style:hover{
+        text-align: center;
+        font-style: italic;
+        text-transform: uppercase;
+        font-size: 17px;
+        color: #FD773D;
+        font-weight: 500;
+        line-height: 10px!important;
+        padding-bottom: 10px;
+        margin-bottom: 2px;
+        font-family: Cambria;
+      }
+      .br-blue-style{
+        text-align: center;
+        font-size: 22px;
+        line-height: 30px;
+        color: #025784;
+        font-family: Cambria;
+      }
+      .br-blue-style:hover{
+        text-align: center;
+        font-size: 22px;
+        line-height: 30px;
+        color: #025784;
+        font-family: Cambria;
+      }
+      .d-btn{
+        height: 45px;
+        width: 250px;
+        background-color: DodgerBlue;
+        font-size: 18px;
+        cursor: pointer;
+        border-radius: 5px;
+        color: white;
+        font-family: Cambria;
+      }
+      .action_button{
+        font-size: 18px;
+        font-family: Cambria;
+        display: flex;
+        color: #025784;
+        cursor: pointer;
+      }
+      .action_button:hover{
+        font-size: 18px;
+        font-family: Cambria;
+        display: flex;
+        color: #008ad4;
+        cursor: pointer;
+      }
+      .action_button:focus{
+        text-decoration: none;
+        font-size: 18px;
+        font-family: Cambria;
+        display: flex;
+        color: #025784;
+        cursor: pointer;
+      }
+      .files-links-hr{
+        border-bottom: 2px solid #025784;
+        width: 38%;
+        margin-left: -22px;
+      }
+      .action_button-speical1{
+        font-size: 18px;
+        font-family: Cambria;
+        display: flex;
+        color: #025784;
+        cursor: pointer;
+        margin-bottom: 18px;
+      }
+      .action_button-speical1:hover{
+        font-size: 18px;
+        font-family: Cambria;
+        display: flex;
+        color: #008ad4;
+        cursor: pointer;
+      }
+      .action_button-speical1:focus{
+        font-size: 18px;
+        font-family: Cambria;
+        display: flex;
+        color: #025784;
+        cursor: pointer;
+        text-decoration: none;
+      }
+      .action_button:focus{
+        text-decoration: none;
+        font-size: 18px;
+        font-family: Cambria;
+        display: flex;
+        color: #025784;
+        cursor: pointer;
+      }
+      .action_button-speical2{
+        font-size: 18px;
+        font-family: Cambria;
+        display: flex;
+        color: #025784;
+        cursor: pointer;
+        margin-top: 22px;
+      }
+      .action_button-speical2:hover{
+        font-size: 18px;
+        font-family: Cambria;
+        display: flex;
+        color: #008ad4;
+        cursor: pointer;
+      }
+      .action_button-speical2:focus{
+        text-decoration: none;
+        font-size: 18px;
+        font-family: Cambria;
+        display: flex;
+        color: #025784;
+        cursor: pointer;
+      }
+      .files-links-li{
+        list-style-image: none;
+        list-style-type: circle;
+        font-size: 18px;
+        font-family: Cambria;
+        margin-bottom: 2px;
+      }
+      .install{
+        margin-top: 30px;
+      }
+      .install-subheading{
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+      .install-paragraph{
+        color: #025784;
+        font-size: 22px;
+        font-family: Cambria;
+        text-align: center;
+      }
+      #contact-us{
+        padding-top: 70px;
+        padding-bottom: 20px;
+      }
+      .contact-us-padding{
+        border: 2px solid #2a88c8;
+        border-radius: 5px;
+        padding: 20px 20px 10px 20px;
+      }
+      .contact-us-heading{
+        color: #2a88c8;
+        text-align: center;
+      }
+      .contact-us-hr{
+        margin: 0 auto;
+        width: 15em;
+        border-bottom: 2px solid #2a88c8;
+      }
+      .contact-us-icons{
+        border: none;
+        max-width: 100%;
+        height: auto;
+        transition-property: width;
+        transition-timing-function: ease-in;
+        transition-duration: .2s;
+        width: 20%;
+      }
+      .contact-us-icons:hover{
+        width: 22%;
+      }
+      #br-contact{
+        padding-top: 70px;
+      }
+      .contact-us-allign{
+        margin-left: 110px;
+      }
+      #footer{
+        margin-top: 80px;
+        height: 100px;
+        background-color: #242424;
+      }
+      .footer{
+        text-align: center;
+      }
+      #wrap{
+        height: 100%;
+        width: 100%;
+        position: relative;
+        margin: 0 auto 0 auto;
+        overflow: hidden;
+      }
+      #footer section	{		
+        border-radius: 50%;		
+        width: 100%;
+        position: reletive;	
+        margin: auto;
+      }
+      #one{		
+        animation: one 5s ease-in-out infinite alternate;
+      }
+      @keyframes 
+      one {
+        from {
+          box-shadow: 0 0 250px 20px #473C78;
+        }		
+        to {box-shadow: 0 0 100px 15px #F72A3B; }
+      }
+      #two{
+        width: 90%;		
+        animation: two 4s ease-in-out infinite alternate;
+      }
+      @keyframes two {
+        from {
+          box-shadow: 0 0 250px 20px #18C499;
+        }
+        to { box-shadow: 0 0 100px 15px #D8F05E; }
+      }
+      #three{
+        width: 80%;		
+        animation: three 3s ease-in-out infinite alternate;
+      }
+      @keyframes three { 
+        from {
+          box-shadow: 0 0 250px 20px #FFDD00;
+        }
+        to { box-shadow: 0 0 100px 15px #3E33FF }
+      }
+      #four{
+        width: 70%;		
+        animation: four 2s ease-in-out infinite alternate;
+      }
+      @keyframes four { 
+        from {
+          shadow: 0 0 250px 20px #781848;
+        }
+        to { shadow: 0 0 100px 15px #F2BBE9; }
+      }
+      #five{
+        width: 60%;
+        animation: five 1s ease-in-out infinite alternate;
+      }
+      @keyframes five { 
+        from {
+          box-shadow: 0 0 250px 20px #42F2A1;
+        }
+        to { box-shadow: 0 0 100px 15px #F4F6AD; }
+      }
+      .footer-logo-style {
+        text-align: center;
+      }
+      .footer-icon{
+        margin: 0 auto;
+        padding-top: 5px;
+      }
+      .footer-p-text-style{
+        margin-top: 5px;
+        color: #fff;
+        font-size: 16px;
+        text-decoration: underline;
+      }
+      #end{
+        padding-top: 1010px;
+      }
+      .keywords-cluster-padding{
+        border: 2px solid #e1e1e1;
+        border-radius: 5px;
+        padding: 5px;
+        margin-top: 20px;
+      }
+      #end-p-text-style{
+        font-size: 18px;
+        color: #a8c8bb;
+        background: #fff;
+        font-family: sans-serif;
+        text-align: justify;
+      }
+      @media (max-width: 768px){ 
+        .fa-bars{
+          display: inline-block;
+          vertical-align: middle;
+          color: white;
+          margin-top: -5px;
+        }
+        .navbar-collapse{
+          display: block;
+          margin-top: -5px;
+        }
+      }
+			#br-contact{
+				padding-top: 70px;
+			}
+			@media (max-width: 768px){
+				#br-contact {
+						padding-top: 60px;
+				}
+			}
+			@media (max-width: 480px){
+				#br-contact {
+						padding-top: 60px;
+				}
+			}
+			.demo-border{
+				border: 2px solid #2a88c8;
+				padding: 20px 20px 10px 20px;
+				border-radius: 5px;
+			}
+			.contact-mrg{
+				margin-bottom: -50px;
+			}
+			.demo-heading-color{
+				color: #2a88c8;
+			}
+			.demo-heading-line{
+				max-width: 15em;
+				margin: 0 auto;
+				border-bottom: 2px solid #2a88c8;
+      }
+			@media (max-width: 480px){
+        .icon-style {
+          margin-top: 20px;
+        }
+      }
+			.a-style{
+				font-size: 18px;
+				font-weight: 600;
+				color: #2a88c8;
+				display: inline-block;
+			}
+			.a-style:nth-of-type(2n) {
+        margin-right: 0;
+      }
+			@media (min-width: 768px){
+				.a-style:nth-of-type(2n){
+					margin-right: 8px;
+				}
+				.a-style:nth-of-type(4n){
+					margin-right: 0;
+				}
+				.a-style{
+					width: calc(25% - 6px);
+				}
+			}
+			.a-style:hover .img-style{
+				transform: scale(1.3);
+			}
+			.figure-style{
+        margin: 30px;
+			}
+			.img-style{
+				transition: transform .2s ease-in-out;
+				max-width: 100%;
+				height: auto;
+				display: block;
+				border: none;
+			}
+      .invoice-printing-heading-color{
+        color: #e85342;
+      }
+      @media (max-width:769px){
+        .invoice-printing-heading-color h1{
+          font-size: 32px;
+        }
+      }
+      @media (max-width:769px){
+        .invoice-printing-heading-color h1{
+          font-size: 30px;
+          margin: 0 0 10px 0;
+        }
+      }
+      .invoice-printing-heading-line{
+        max-width: 15em;
+        border-bottom: 2px solid #e85342;
+        margin: 0 auto;
+      }
+      .invoice-printing-p-text-style{
+        text-align: justify!important;
+        margin-bottom: 10px;
+        color: #4d4d4d;
+        font-size: 18px;
+        font-weight: 300;
+        font-family: Georgia, sans-serif;
+        padding-top: 20px;
+      }
+      .invoice-printing-border{
+        margin: 0 5px;
+        border: 2px solid #e85342;
+        border-radius: 5px;
+      }
+      .invoice-printing-slider{
+        margin-top: 13px;
+      }
+      .invoice-printing {
+        background-color: #ededed;
+        border-radius: 5px;
+        left: 2%;
+        width: 40%;
+        position: relative;
+      }
+      @media (max-width: 1115px){
+        .invoice-printing{
+          background-color: #ededed;
+          border-radius: 5px;
+          left: 2%;
+          width: 98%;
+          position: relative;
+        }
+      }
+      .invoice-printing ul {
+        text-align: left;
+        margin-left: -1%;
+        list-style: url(http://billingregister.com/img/list-bullet.png);
+      }
+      @media (max-width: 768px){
+        .invoice-printing ul {
+            text-align: left;
+            margin-left: -1%;
+            list-style: url(http://billingregister.com/img/list-bullet.png);
+        }
+      }
+      .invoice-printing ul li {
+        font-size: 18px;
+        margin-left: -1%;
+        padding-bottom: 11px;
+        line-height: 23px;
+        color: #4d4d4d;
+      }
+      #coupon-sticker-label-printing{
+        padding-top: 70px;
+      }
+      @media (max-width:480px){
+        #coupon-sticker-label-printing{
+          padding-top: 60px;
+        }
+      }
+      .coupon-sticker-label-printing-heading-color{
+        color: #e85342;
+      }
+      .coupon-sticker-label-printing-heading-line{
+        max-width: 15em;
+        border-bottom: 2px solid #e85342;
+        margin: 0 auto;
+      }
+      .coupon-sticker-label-printing-p-text-style{
+        text-align: justify!important;
+        margin-bottom: 10px;
+        color: #4d4d4d;
+        font-size: 18px;
+        font-weight: 300;
+        font-family: Georgia, sans-serif;
+        padding-top: 20px;
+      }
+      .coupon-sticker-label-printing-border{
+        border: 2px solid #e85342;
+        margin: 0 5px;
+        border-radius: 5px;
+      }
+      .coupon-sticker-label-printing-slider{
+        margin-top: 13px;
+      }
+      .coupon-sticker-label-printing {
+        background-color: #ededed;
+        border-radius: 5px;
+        left: 2%;
+        width: 47%;
+        position: relative;
+      }
+      @media (max-width: 1115px){
+        .coupon-sticker-label-printing{
+          background-color: #ededed;
+          border-radius: 5px;
+          left: 2%;
+          width: 98%;
+          position: relative;
+        }
+      }
+      .coupon-sticker-label-printing ul {
+        text-align: left;
+        margin-left: -1%;
+        list-style: url(http://billingregister.com/img/list-bullet.png);
+      }
+      @media (max-width: 768px){
+        .coupon-sticker-label-printing ul {
+            text-align: left;
+            margin-left: -1%;
+            list-style: url(http://billingregister.com/img/list-bullet.png);
+        }
+      }
+      .coupon-sticker-label-printing ul li {
+        font-size: 18px;
+        margin-left: -1%;
+        padding-bottom: 11px;
+        line-height: 23px;
+        color: #4d4d4d;
+      }
+    </style>
+  </head>
+  <body>
+    <section>		
+      <div class="navbar navbar-fixed-top" role="navigation" data-0="line-height: 60px; height: 60px; background-color:rgba(0,0,0,1);" data-300="line-height:60px; height:60px; background-color:rgba(0,0,0,1);">		
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="fa fa-bars"></span>
+          </button>
+          <h1><img class="logo-size" src="https://www.billingregister.com/img/logo.png" alt="Logo" /><a class="navbar-brand" href="https://www.billingregister.com/">Billing Register</a></h1>				
+        </div>
+        <div class="navbar-contact-button"><a href="#contact-us">Contact</a></div>
+        <div class="navbar-collapse collapse" style="overflow-y: clip;margin-top: -6px;">
+          <ul class="nav navbar-nav" data-0="margin-top:10px;" data-300="margin-top:10px;">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#downloads">Download</a></li>
+            <li><a href="index.html#price">Price</a></li>
+            <li><a href="index.html#customization">Customize</a></li>	
+          </ul>
+        </div>			
+      </div>		
+    </section>	
+      
+    <section id="home" class="appear section slide-container">
+      <div class="slider">
+        <div id="about-slider">
+          <div id="carousel-slider" class="carousel slide" data-pause="false" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carousel-slider" class="active" data-slide-to="0"></li>
+              <li data-target="#carousel-slider" data-slide-to="1"></li>
+              <li data-target="#carousel-slider" data-slide-to="2"></li>
+              <li data-target="#carousel-slider" data-slide-to="3"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="item active pause">
+                <img src="http://billingregister.com/img/POS%20for%20Free.jpg" alt="Best Billing Sofware for your Business" class="img-responsive">
+              </div>
+              <div class="item pause">
+                <img src="http://billingregister.com/img/Free%20POS.jpg" alt="Super Simple Billing Software" class="img-responsive">
+              </div>
+              <div class="item pause">
+                <img src="http://billingregister.com/img/POS%20for%20Free.jpg" alt="Easy tax invoice software that handles all taxes" class="img-responsive">
+              </div>
+              <div class="item pause">
+                <img src="http://billingregister.com/img/Free%20POS.jpg" alt="Billing Register Software" class="img-responsive">
+              </div>
+            </div>
+            <a class="left carousel-control hidden-xs" href="#carousel-slider" data-slide="prev">
+              <i class="fa fa-angle-left"></i>
+            </a>
+            <a class="right carousel-control hidden-xs" href="#carousel-slider" data-slide="next">
+              <i class="fa fa-angle-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>  
+    </section>
+
+    <section class="appear section second">
+      <div class="section-header">
+        <div class="container">
+          <div class="row">
+            <div
+              class="wow bounceIn sale-order-heading-color animated"
+              style="visibility: visible"
+            >
+              <h1 class="section-header-2-heading">
+                Truly Quick Billing/Invoicing Software
+              </h1>
+              <div class="sale-order-heading-line flex justify-center">
+                <hr />
+              </div>
+              <p class="section-2-subheading">
+                POS for Retail | POS for Wholesale | Easy To Use POS | Almost Free
+                POS | Comprehensive POS
+              </p>
+              <p class="text-1">
+                Billing Register is a Complete Business Management Software that is
+                best suitable for small businesses like Restaurant, Retail Shops,
+                Wholesale Stores, Small Manufactures, Service Firms, and Engineering
+                Companies. It has super special capabilities with respect to
+                Invoicing. Restaurant and small retail stores like Hardware Stores,
+                Grocery Stores, and even Milk Booths find it most suitable for them
+                as they have large inventory and price fluctuations.
+              </p>
+              <div class="col-lg-12 highlights-border">
+                <h1 class="section-2-header-3">Highlights</h1>
+                <div class="highlights-heading-line">
+                  <hr />
+                </div>
+                <br />
+                <div class="col-lg-12 highlights">
+                  <div class="column-1">
+                    <li class="li-class">Quickly Add Sale Invoices</li>
+                    <li class="li-class">
+                      Create Quotes / Estimates / Proforma-Invoices
+                    </li>
+                    <li class="li-class">
+                      Search Customer by Name, Phone or Address
+                    </li>
+                    <div class="hrli-1"></div>
+                    <li class="li-class">Inbuilt Barcode Printing / Scanning</li>
+                    <li class="li-class">Numerous Pricing / Discounting Options</li>
+                    <li class="li-class">Tips, Change, and Balance Control</li>
+                    <div class="hrli-1"></div>
+                    <li class="li-class">Cash, Credit Card, Wallet, and Cheque</li>
+                    <li class="li-class">On Account Sales & Credit Control</li>
+                    <li class="li-class">Export / Import and SEZ Sales</li>
+                    <li class="li-class">Automated Tax Calculations</li>
+                    <li class="li-class">Robust Accounting (Book Keeping)</li>
+                    <div class="hrli-1"></div>
+                    <li class="li-class">
+                      Share Invoice PDFs via SMS / Email / Messaging-Apps
+                    </li>
+                    <li class="li-class">
+                      Bulk Printing of Invoices (at end of week/month)
+                    </li>
+                    <li class="li-class">Consolidated Invoice & Purchase PDFs)</li>
+                    <div class="hrli-1"></div>
+                    <li class="li-class">Inventory Control & Management</li>
+                    <li class="li-class">
+                      Items/Categories and Additional Items / Charges
+                    </li>
+                    <li class="li-class">
+                      Install packing control screen in warehouse
+                    </li>
+                    <li class="li-class">Raw Material & Finished Good Control</li>
+                    <div class="hrli-1"></div>
+                    <li class="li-class">Multi-Godown Based Stock Report</li>
+                    <li class="li-class">Stock Transfer and Stock Adjustment</li>
+                    <li class="li-class">Item Label Printing for Self-Branding</li>
+                  </div>
+                  <div class="column-2">
+                    <li class="li-class">Address Label Printing for Shipping</li>
+                    <li class="li-class">Numerous Business Performance Reports</li>
+                    <li class="li-class">Export data to Nicely Formatted Excel</li>
+                    <li class="li-class">Auto Emailing of Performance Reports</li>
+                    <li class="li-class">CRM/Lead-Management / Channel-Sales</li>
+                    <div class="hrli-2"></div>
+                    <li class="li-class">Bulk Marketing via SMS & Email etc</li>
+                    <li class="li-class">Email Via IMAP/SMTP/Outlook</li>
+                    <li class="li-class">SMS Via Gateway and 3G/4G Dongle</li>
+                    <div class="hrli-2"></div>
+                    <li class="li-class">DOB/Anniversary/Holiday Reminders</li>
+                    <li class="li-class">Customer Based Events & Reminders</li>
+                    <li class="li-class">Schedule on Going Events / Reminders</li>
+                    <div class="hrli-2"></div>
+                    <li class="li-class">Support for All Foreign Languages</li>
+                    <li class="li-class">Support for All Geographies</li>
+                    <li class="li-class">Support for Multi-Currency</li>
+                    <li class="li-class">
+                      Auto extraction of Currency Exchange Rate
+                    </li>
+                    <div class="hrli-2"></div>
+                    <li class="li-class">Various Data Searching Techniques</li>
+                    <li class="li-class">Write own SQL & Exports Data in Excel</li>
+                    <li class="li-class">
+                      Export/Imports Contacts from Excel / CSV / VCF
+                    </li>
+                    <div class="hrli-2"></div>
+                    <li class="li-class">
+                      Numerous Settings to server personalized practices.
+                    </li>
+                    <li class="li-class">Role Based Employee Permissions</li>
+                    <li class="li-class">Employee Theft Control System</li>
+                  </div>
+                </div>
+                <div class="col-lg-12 video-align" style="text-align: center">
+                  <iframe
+                    class="installation-video"
+                    src="https://www.youtube.com/embed/flS8R75eWP0/"
+                  ></iframe>
+                  <iframe
+                    class="installation-video"
+                    src="https://www.youtube.com/embed/vRZMt1QLzew/"
+                  ></iframe>
+                </div>
+              </div>
+              <p class="p-text-style">
+                In Billing Register, Bills can be added in fraction of a minute. New
+                Customers can be added on the fly while adding invoices. Existing
+                customers can be searched based on phone number, address, ID and
+                other parameters and can be quickly assigned to new invoices. Items
+                can be searched and added on the basis of Item Name, and Barcode-Id
+                etc. There are multiple ways to accomplish these tasks so that user
+                can opt the path as suitable to his/her operational needs.
+              </p>
+              <br>
+              <div class="features-sale-order">
+                <div class="col-lg-4 sale-order-1 inline-block">
+                  <div
+                    class="sale-order-line-wrap-1 testimonial features-sale-order-padding1"
+                  >
+                    <ul class="align-left">
+                      <div class="sale-processing-col">
+                        <div class="sale-processing-icon align-center">
+                          <figure><i class="fa fa-laptop"></i></figure>
+                        </div>
+                        <br />
+                        <li
+                          class="line-head-row wow bounceIn animated heading-style-1"
+                          style="visibility: visible"
+                        >
+                          Quick/Easy Billing
+                        </li>
+                        <li class="li-style-1">
+                          Monitor open orders from the main screen.
+                        </li>
+                        <li class="li-style-1">
+                          Search Orders with various parameters.
+                        </li>
+                        <li class="li-style-1">New orders can be added quickly.</li>
+                        <li class="li-style-1">
+                          New customers can be added while adding orders.
+                        </li>
+                        <li class="li-style-1">
+                          Check customer purchase history quickly.
+                        </li>
+                        <li class="li-style-1">
+                          Existing customers can be searched/assigned quickly to new
+                          sale.
+                        </li>
+                        <li class="li-style-1">
+                          Quickly Add Items and know their stock status.
+                        </li>
+                        <li class="li-style-1">
+                          Record Order status to know if an order is completed or
+                          not.
+                        </li>
+                        <li class="li-style-1">
+                          Monitor Orders based on Sale Point (Table/Counter).
+                        </li>
+                        <li class="li-style-1">
+                          Create Estimates/Quotes just like Invoices.
+                        </li>
+                        <li class="li-style-1">
+                          Quickly convert estimates into Invoices.
+                        </li>
+                      </div>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-lg-4 sale-order-1 inline-block">
+                  <div
+                    class="sale-order-line-wrap-2 testimonial features-sale-order-padding1"
+                  >
+                    <ul class="align-left">
+                      <div class="sale-processing-col">
+                        <div class="sale-processing-icon2 align-center">
+                          <figure><i class="fa fa-money"></i></figure>
+                        </div>
+                        <br />
+                        <li
+                          class="line-price-row wow bounceIn animated heading-style-2"
+                          style="visibility: visible"
+                        >
+                          Money Management
+                        </li>
+                        <li class="li-style-2">
+                          Automatically applies/calculates taxes and show respective
+                          amounts separately.
+                        </li>
+                        <li class="li-style-2">
+                          Monitor cash sale balances through color coding.
+                        </li>
+                        <li class="li-style-2">
+                          Displays previous balance right on order screen.
+                        </li>
+                        <li class="li-style-2">
+                          Record receipts made via Cash, Card, or Cheque.
+                        </li>
+                        <li class="li-style-2">Supports unlimited Online Wallets.</li>
+                        <li class="li-style-2">Records Tips paid to Employees.</li>
+                        <li class="li-style-2">
+                          Coupon creation and redemption for Sale Promotion.
+                        </li>
+                        <li class="li-style-2">
+                          Variety of Sale/Receipt Performance Reports.
+                        </li>
+                        <li class="li-style-2">
+                          Export performance metrics in well formatted files.
+                        </li>
+                        <li class="li-style-2">
+                          Export sale/receipt reports for
+                          very easy accounting.
+                        </li>
+                      </div>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-lg-4 sale-order-1 inline-block">
+                  <div class="sale-order-line-wrap-3 testimonial features-sale-order-padding3">
+                    <ul class="align-left">	
+                      <div class="sale-processing-col">
+                        <div class="sale-processing-icon align-center">
+                          <figure><i class="fa fa-truck"></i></figure>
+                        </div><br>
+                        <li class="line-head-row wow bounceIn animated heading-style-1" style="visibility: visible;">Notifications &amp; Delivery</li>
+                        <li class="li-style-3">Send SMS on completion of Order.</li>
+                        <li class="li-style-3">Notifications of additional tasks to be performed to complete a sale process.</li>
+                        <li class="li-style-3">Information about service point (like table, or room) being busy or free.</li>
+                        <li class="li-style-3">Print Address Labels/Stickers for error free shipment/delivery.</li>
+                        <li class="li-style-3">Delivery Address (other than billing address) can be added separately.</li>
+                        <li class="li-style-3">For tax calculation purpose, Place of Supply can be set to Billing or Delivery address as desired.</li>
+                        <li class="li-style-3">Sale against document/certificate like PO Number, C-Form, etc.</li>
+                        <li class="li-style-3">Record E-Commerce Operator name for online sales.</li>
+                        <li class="li-style-3">Quick addition of transport mode details through master data/record.</li>
+                        <li class="li-style-3">Sell under Ship-To Bill-To model (Drop Shipping).</li>
+                      </div>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="misc1" class="appear section line-center">
+      <div class="container">
+        <div class="row">
+          <div class="wow rotateIn animated">
+            <div class="source-col col-lg-4">
+              <div class="figure-border-1">
+                <figure>
+                  <i class="fa fa-calendar"></i>
+                </figure>
+              </div>
+              <li
+                      class="heading-style-4 align-center"
+                      style="visibility: visible"
+                    >
+                      Holidays Calender
+              </li>
+              <p class="source-col-text">Maintain Holidays List in Billing Software itself. Get notified about the upcoming holidays. Send wishes via SMS/Email to customers and employees on religious or other special occasions. Nice way to connect with stake holders.</p>
+            </div>
+            <div class="source-col col-lg-4">
+              <div class="figure-border-2">
+                <figure>
+                  <i class="fa fa-search"></i>
+                </figure>
+              </div>
+              <li
+                      class="heading-style-5 align-center"
+                      style="visibility: visible"
+                    >
+                      Record Searching
+              </li>
+              <p class="source-col-text">In this Billing Software, there are variety of options available for quick searching of desired records. Two major methods available are General and Specific Search. General Search automatically searches all main fields. Specific search can be applied collectively on set of fields chosen.</p>
+            </div>
+            <div class="source-col col-lg-4">
+              <div class="figure-border-3">
+                <figure>
+                  <i class="fa fa-barcode"></i>
+                </figure>
+              </div>
+              <li
+                      class="heading-style-6 align-center"
+                      style="visibility: visible"
+                    >
+                      Barcoding
+              </li>
+              <p class="source-col-text">Not just barcode scanning, this Billing Software can be used for designing, and printing of bar code stickers as well. Variety of design options are available. Barcodes can be printed on roles as well as A4-Paper. Items to bill/invoice can be added through barcode scanning.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="invoice-printing" class="appear section">
+      <div class="container">
+        <div class="row">								
+          <div class="wow bounceIn align-center invoice-printing-heading-color">
+            <h1>Invoice Printing</h1>
+            <div class="invoice-printing-heading-line"></div>
+          </div><br />
+          <p class="invoice-printing-p-text-style">Billing Register is a unique Billing Software that provides full featured module for designing Invoice Headers. In Billing Register, you can design your Invoice Header the way you want them to look great. Invoices, Sale-Orders and other reports can be printed on A4, A5, Legal, 82mm and 58mm size paper. Printer options like default printer and margins can be set. Report footer texts can be configured. Invoices can be printed in bulk so as to issue a set of invoices to customer or for creating duplicate business copies. Accounting reports in ready reference formats can be generated as desired by accountant.</p>
+        </div><br />
+        <div class="row left-right-mrg">	
+          <div class="col-lg-12 invoice-printing-border">
+            <div class="col-lg-7 invoice-printing-slider">						
+              <div id="ninja-slider" style="float:left;">
+                <div class="slider-inner">
+                  <ul>
+                    <li><a class="ns-img" href="http://billingregister.com/img/1.jpg" alt="A4 Tax Invoice Template for Small Business"></a></li>
+                    <li><a class="ns-img" href="http://billingregister.com/img/2.jpg" alt="Colorful A5 Bill Design for Retail Shop and Stores"></a></li>
+                    <li><a class="ns-img" href="http://billingregister.com/img/3.jpg" alt="Nice 80mm and 58mm Thermal Paper Receipt Invoice format"></a></li>
+                  </ul>
+                  <div class="fs-icon" title="Expand/Close"></div>
+                </div>
+              </div>						
+            </div>						
+            <div class="col-lg-5 invoice-printing">
+              <ul>	
+                <li>Design an Invoice Header as you like.</li>
+                <li>Add a Logo wherever you like.</li>
+                <li>Print invoices on your own colorful letter head.</li>
+                <li>Dynamically set Report Header/Footer Texts.</li>							
+                <li>Add Bank Details and Terms and Conditions.</li>
+                <li>Auto Sign Invoices.</li>
+                <li>Show or hide Taxes based on sale type (B2B and B2C).</li>	
+                <li>Various methods exist on how to display tax details.</li>
+                <li>Choose to print price on invoice being inclusive or exclusive of taxes.</li>
+                <li>Print Invoice on Thermal Receipts (2-inch and 3-inch).</li>
+                <li>Print Invoices on A4, A5, and Legal-Size paper.</li>
+                <li>Have different printers for different Invoice Sizes.</li>
+                <li>Unlimited Invoice Copy Nomenclatures with option to print texts like Original Copy, Duplicate Copy or Second Copy.</li>
+                <li>Preview Invoice before printing.</li>
+                <li>Maintain Invoice Print logs to control Employee Theft.</li>							
+                <li>Print all invoices for a specified period in one go.</li>
+                <li>Print Order Slip for quick preparation of an Order.</li>
+                <li>Add extra Notes on the go to Invoice and Order Slip.</li>
+              </ul>
+            </div>						
+          </div>									
+        </div>
+      </div>
+    </section>
+    
+  <section class="section-4">
+    <div class="sec-4">
+      <div class="calculation-of-discounts-heading">
+        <h1>Quickly Prepare your Sale Invoices/Bills</h1>
+      </div>
+      <hr class="calculation-of-discounts-hr-1">
+      <div class="calculation-of-discounts-subheading">
+        <p>Add items and additional charges with ease. Automated/Easy calculation of applicable discounts.</p>
+      </div>
+      <p class="calculation-of-discounts-paragraph">Creating sale orders/invoices and loading items into sale orders is the activity on which sales people spend 80% of their time. It is quite imperative to arm them with such a billing software that they can perform their job with speed as well as ease. Further, different people find ease in different modes. Discounting being an integral part of any business to boost sales and give extra smile on customer's face, Billing Register has specialized features to handle discounting.</p>
+      <div class="load-items-into-sale-orders-lists">
+        <div class="load-items-into-sale-orders col-lg-5">
+        <div class="load-items">
+          <div class="img-load-items">
+            <img src="https://billingregister.com/img/Inventory%201.jpg" alt="" class="img-responsive">
+          </div>
+          <br>
+          <div>
+            <li class="heading-style-load-items">Variety of ways to Load Item into Sale Orders</li>
+            <div class="calculation-of-discounts-hr-2"></div>
+            <br>
+            <p class="load-items-p-style">Billing Register Software provides all possible industry accepted methods for adding items into sale orders.</p>
+            <ul>
+              <li class="li-style-load-items">Items can be added with smart text search.</li>
+              <li class="li-style-load-items">Search items based on Item Category.</li>
+              <li class="li-style-load-items">Items can be added with Bar-Code Scanning.</li>
+              <li class="li-style-load-items">Item code and Price displays while adding item.</li>
+              <li class="li-style-load-items">With/without (Extras) can be added (Like toppings on a Pizza).</li>
+              <li class="li-style-load-items">Additional charges like freight can be added (Default/Fixed).</li>
+            </ul>
+          </div>
+        </div>
+        </div>
+        <div class="load-items-into-sale-orders col-lg-5">
+        <div class="load-items">
+          <div class="img-load-items">
+            <img src="https://billingregister.com/img/Discounts.jpg" alt="" class="img-responsive">
+          </div>
+          <br>
+          <div>
+            <li class="heading-style-load-items">Wide Discounting options while entering Sale Order</li>
+            <div class="calculation-of-discounts-hr-2"></div>
+            <br>
+            <p class="load-items-p-style">Discounting being integral part of any business, here discount can be set/applied based on all possible ways.</p>
+            <ul>
+              <li class="li-style-load-items">Give discount in amount or in percentage.</li>
+              <li class="li-style-load-items">Facility to directly change sale price at item level or order level. Get resultant discount/tax auto calculated.</li>
+              <li class="li-style-load-items">Give discount on after tax amount.</li>
+              <li class="li-style-load-items">Automatic price calculation as per unit selected.</li>
+              <li class="li-style-load-items">Change Item List Price on the fly (without changing master).</li>
+            </ul>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="handles-all-sales-taxes" class="appear section">
+		<div class="container">	
+			<div class="row left-right-mrg">
+				<div class="col-lg-12 handles-all-sales-taxes-border"><br />
+					<div class="wow bounceIn align-center handles-all-sales-taxes-color">
+						<h1>Handles all kind of Sales Taxes</h1>					
+						<div class="handles-all-sales-taxes-line"></div>
+					</div>
+					<p class="handles-all-sales-taxes-p-text-style">Tax calculation is always treated as a difficult/time-consuming job. Businesses need a software that can auto perform tax calculation seamlessly. Here, all kind of taxes like GST, VAT, Sales-Tax, Service-Tax, Interstate-Tax, Excise-Duty, Import-Duty, Cess, Specific-Cess and Reverse-Charge can be created and configured as per domestic/international tax rules. All the taxes get automatically applied/calculated in invoice as per the sale-type, sale-geography, customer-type and item. There is an option to include sale-tax into cost part for calculation of subsequent taxes (tax on tax) as applicable in some countries in the case of excise duty. Taxes can also be defined for additional charges.</p>
+					<div class="col-lg-6 handles-all-sales-taxes">	
+						<ul>						
+							<li class="handles-all-sales-taxes-li">All kind of taxes are supported such as GST, VAT, Sales-Tax, Service-Tax, Interstate-Tax, Excise-Duty and Import-Duty.</li>
+							<li class="handles-all-sales-taxes-li">Option to include sales-tax (like excise duty) into cost part for calculation of subsequent taxes (tax on tax).</li>
+							<li class="handles-all-sales-taxes-li">Supports separation of sales taxes based on geographical location.</li>
+							<li class="handles-all-sales-taxes-li">Facility to separate sales taxes based on business sections.</li>
+							<li class="handles-all-sales-taxes-li">Taxes can be separately defined for additional charges.</li>
+							<li class="handles-all-sales-taxes-li">Option is there to calculate Tax on Tax. Supports Cess and Surcharge also.</li>
+						</ul>
+					</div>
+					<div class="col-lg-6 handles-all-sales-taxes">	
+						<ul>
+						  <li class="handles-all-sales-taxes-li">Taxes get automatically applied/calculated in sale order as per the sale-type, sale-geography, customer-type and item.</li>
+							<li class="handles-all-sales-taxes-li">Supports Quantity based taxation as applicable in case of Smoke, Tobacco, Cigarette, Alcohol etc.</li>
+							<li class="handles-all-sales-taxes-li">Also supports charging of tax based on List Price and MRP.</li>
+							<li class="handles-all-sales-taxes-li">With/Without items inherits the taxes from primary item.</li>
+							<li class="handles-all-sales-taxes-li">Facility to change tax rate/amount on the fly (Without changing master).</li>
+							<li class="handles-all-sales-taxes-li">Tons of report formats to ease filing of tax returns.</li>						
+						</ul>
+					</div>					
+				</div>
+			</div>
+		</div>
+	</section>
+
+  <section id="wide-inventory-options">
+    <div class="container">
+      <div class="row">
+        <div class="wide-inventory-options-header">
+          <div class="wide-inventory-options-heading-color">
+            <h1>Billing Software with variety of Inventory/Pricing options</h1>
+            <div class="wide-inventory-options-hr"></div>
+          </div>
+          <br>
+          <p class="p-text-style">Every business is unique and so is its inventory. Billing Register offers a variety of ways to record all kind of properties attached to items/goods/services. Pricing can be defined Exclusive as well as Inclusive of Taxes. Pre-generated Barcodes can be attached; even multiple barcodes can be attached to single item so as to keep similar items under one code.</p>
+        </div>
+        <div class="wide-inventory-options">
+          <div class="col-lg-6 sale-order-2" style="display: inline-block;">
+            <div class="wide-inventory-options-line-wrap testimonial wide-inventory-options-padding2">
+              <ul>
+                <div class="wide-inventory-options-img2 align-center">
+                  <img class="img-responsive" src="https://billingregister.com/img/Inventory%202.jpg" alt="Best Billing Software for Hardware Stores as they have price fluctuations">
+                </div>
+                <br>
+                <div class="item-detail-header-1">
+                  <span>Item Detail</span>
+                </div>
+                <li class="item-detail-space"></li>
+                <div class="item-detail-hr-1"></div>
+                <br>
+                <div class="iten-detail-list">
+                  <li>Pricing can be marked inclusive/exclusive of taxes.</li>
+                  <li>Quickly review & edit price list through Import/Export to Excel.</li>
+                  <li>Record basic Item Info like Name, SKU, Internal Code, HSN, etc.</li>
+                  <li>Create Items with duplicate/same name but different properties.</li>
+                  <li>Record measurement unit like Pc/Kg/Lt etc (mostly inbuilt). Also supports Aggregate Amount values (Lumpsum Contract), where no measurement unit is applicable.</li>
+                  <li>Create additional measurement units as desired.</li>
+                  <li>Facility to define additional Item Attributes (like size, color, product line etc.) for better item detailing.</li>
+                  <li>Show/Hide items attributes on internal/external reports.</li>
+                  <li>Item location in the store/warehouse can be specified.</li>
+                </div>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-6 sale-order-2" style="display: inline-block;">
+            <div class="wide-inventory-options-line-wrap testimonial wide-inventory-options-padding3">
+              <ul>
+                <div class="wide-inventory-options-img3 align-center">
+                  <img class="img-responsive" src="https://billingregister.com/img/Inventory%203.jpg" alt="Best Billing Software for Hardware Stores as they have price fluctuations">
+                </div>
+                <br>
+                <div class="item-detail-header-2">
+                  <span>Additional Features</span>
+                </div>
+                <li class="item-detail-space"></li>
+                <div class="item-detail-hr-2"></div>
+                <br>
+                <div class="iten-detail-list">
+                  <li>Barcodes can be assigned/generated.</li>
+                  <li>Multiple barcode per items for easy grouping.</li>
+                  <li>Item Label Stickers can be designed and printed.</li>
+                  <li>Unlimited formats for Item Label Stickers.</li>
+                  <li>Quickly create new items via copy feature.</li>
+                  <li>Deactivate old inventory items, instead of deleting items.</li>
+                  <li>Supports With/Without items to add extras to main item.</li>
+                  <li>Search items on various parameters.</li>
+                  <li>Split items among business sections.</li>
+                  <li>You Can Mark item to be used either for Sale or for Purchase only (Not for both Sale/Purchase).</li>
+                  <li>Get Items performance statistics for better business control.</li>
+                </div>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="customer-management" class="appear section">
+    <div class="container">
+      <div class="row left-right-mrg">
+        <div class="customer-management-border col-lg-12">
+          <div class="customer-management-header">
+            <h1>Customer Management</h1>
+            <div class="customer-management-line"></div>
+          </div>
+          <br>
+          <div class="customer-management-p-text-style">
+            <p>Customer, the heartbeat of a business, requires your special attention. Billing Register Software provides ways though which you can connect with your customer and make them feel that they are special to you. Develop a healthy relationship with your King to get unbelievable success in your business.</p>
+          </div>
+          <ul class="customer-management-ul-1 col-lg-6">
+            <li>Record customer's Basic Information. Supports multiple addresses.</li>
+            <li>Record customer contact info, and record sub-contacts.</li>
+            <li>Clear separation between B2B and B2C Customers.</li>
+            <li>Mark Phone/Email as Active/Inactive and mark DND.</li>
+            <li>Be notified about Customer's Birthdays and Anniversaries, and wish them.</li>
+          </ul>
+          <ul class="customer-management-ul-2 col-lg-6">
+            <li>Group customers into unlimited segments.</li>
+            <li>Check Client Purchases/Payments and Balances quickly.</li>
+            <li>Search customers on the bases of several parameters.</li>
+            <li>Send messages to customers in bulk.</li>
+            <li>Export Customer Contacts to Excel file.</li>
+            <li>Merge duplicate customers. Get key customer performance indicators.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="grow-with-targeted-marketing">
+    <div class="container">
+      <div class="row left-right-mrg">
+        <div class="col-lg-12 grow-with-targeted-marketing-border">
+          <br>
+          <div class="grow-with-targeted-marketing-header">
+            <h1>Grow with Targeted Marketing</h1>
+            <div class="grow-with-targeted-marketing-line"></div>
+          </div>
+          <br>
+          <div class="grow-with-targeted-marketing-paragraph col-lg-12">
+            <p class="grow-with-targeted-marketing-p-text-style">
+              To strive for expected business growth, one needs to connect with Customers, Vendors, Employees and other stakeholders via SMS and Emails. For this to be accomplished successfully, one needs a tool which can make this task streamlined. Billing Register is such a tool which can assist in automating your marketing. The more you use this tool, the more it will help you boost your business.
+            </p>
+          </div>
+          <div class="col-lg-6 grow-with-targeted-marketing">
+            <ul>
+              <li>Record Customer Phone Number while adding sales order.</li>
+							<li>Record DOB and Anniversary for better, Personalized, Customer relations.</li>
+							<li>Reminders on birthdays &amp; anniversaries of Customers &amp; Employees.</li>
+							<li>Send SMS to Customers/Vendors via 3G-Dongle or SMS Gateway.</li>
+							<li>Support unlimited SMS Gateways. Just configure API.</li>
+							<li>Send messages like “Thanks for purchasing with us”.</li>
+							<li>Send emails via Outlook as well as SMTP Email Server.</li>
+            </ul>
+          </div>
+          <div class="col-lg-6 grow-with-targeted-marketing">
+            <ul>
+              <li>Import/Export contacts from/to VCF file.</li>
+							<li>Holiday Calendar to remind you about upcoming event for running promotional sales.</li>
+							<li>Create Wish/Message templates (with smart tags).</li>
+							<li>Customized message recipient groups. (Full SQL Support).</li>
+							<li>Bulk Marketing Groups for storing/capturing marketing data.</li>
+							<li>Buy marketing data and import that into software.</li>
+							<li>Auto extract/import marketing data (Phone/Email) from Text Files.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="globe-is-the-limit">
+    <div class="container">
+      <div class="row">
+        <div class="globe-is-the-limit">
+          <div class="col-lg-4 sale-order" style="padding-bottom: 15px;">
+            <div class="globe-is-the-limit-line-wrap testimonial globe-is-the-limit-padding1">
+              <ul style="line-height: 32.5px;">
+                <div class="globe-is-the-limit-img1">
+                  <img class="img-responsive" src="https://billingregister.com/img/Custom%20Reports.jpg" alt="Best Billing Software for Generate Custom Reports">
+                </div>
+                <br>
+                <li class="line-head-row-1">SQL Support</li>
+                <li class="heading-line-row-1"></li>
+                <li class="globe-is-the-limit-p-text-style-1">All your data is yours. You have full ability to export every kind of data in Excel Format.</li>
+								<li class="globe-is-the-limit-p-text-style-1">Billing Register supports SQL (Structured Query Language), which is a world known standard language for data extraction.</li>
+								<li class="globe-is-the-limit-p-text-style-1">Design your queries in SQL and run them to extract the data you want.</li>
+								<li class="globe-is-the-limit-p-text-style-1">In case you do not have knowlege on how to write SQL Queries, you can take our help. Help is provided at quite low price.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-4 sale-order" style="padding-bottom: 15px;">
+            <div class="globe-is-the-limit-line-wrap testimonial globe-is-the-limit-padding2">
+              <ul style="line-height: 26.1px;">
+                <div class="globe-is-the-limit-img2">
+                  <img src="https://billingregister.com/img/digital-payment.jpg" class="img-responsive" alt="Best Billing Software for Generate Custom Reports">
+                </div>
+                <br>
+                <li class="line-head-row-2">Payment Methods & Currencies</li>
+                <li class="heading-line-row-2"></li>
+                <li class="globe-is-the-limit-p-text-style-2">Local Currency denominations can be configured.</li>
+								<li class="globe-is-the-limit-p-text-style-2">Smartly calculate change payments in-case of delivery orders.</li>
+								<li class="globe-is-the-limit-p-text-style-2">Definable local currency symbol (Else Short code).</li>
+								<li class="globe-is-the-limit-p-text-style-2">Generate Invoice in local as well as foreign currency.</li>
+								<li class="globe-is-the-limit-p-text-style-2">Auto generates currency conversion rate in case of exports.</li>
+								<li class="globe-is-the-limit-p-text-style-2">Get client balances in foreign currency and local currency.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-4 sale-order" style="padding-bottom: 15px;">
+            <div class="globe-is-the-limit-line-wrap testimonial globe-is-the-limit-padding1">
+              <ul style="line-height: 28.2px;">
+                <div class="globe-is-the-limit-img1">
+                  <img class="img-responsive" src="https://billingregister.com/img/organization.jpg" alt="Best Billing Software for Generate Custom Reports">
+                </div>
+                <br>
+                <li class="line-head-row-1">Miscellaneous Details</li>
+                <li class="heading-line-row-1"></li>
+                <li class="globe-is-the-limit-p-text-style-3">Monitor Licenses/Certifications expiration.</li>
+								<li class="globe-is-the-limit-p-text-style-3">Financial Year creation, closing and locking books.</li>		
+								<li class="globe-is-the-limit-p-text-style-3">Design customized report headers.</li>
+                <li class="globe-is-the-limit-p-text-style-3">Supports Geo-Locations like Export, SEZ, Inter-State, Local Sale.</li>
+								<li class="globe-is-the-limit-p-text-style-3">Split sale book on the bases of credit sale and cash sale.</li>
+								<li class="globe-is-the-limit-p-text-style-3">Include/Exclude Tax amount in Invoice Amount.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="employee-management">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 employee-management-border">
+          <br>
+          <div class="employee-management-header">
+            <h1>Employee Management</h1>
+            <div class="employee-management-hr"></div>
+          </div>
+          <br>
+          <div class="employee-management-paragraph">
+            <p class="p-text-style">A full fledge module is available for employee and their role management so that they have access to only areas as applicable to them. Employee picture, contact details, emergency contact details, qualification/skills details can be added. Employee signatures can also be added so as to auto sign the reports.</p>
+          </div>
+          <div class="col-lg-5" style="padding-bottom: 2%;">
+            <img src="https://billingregister.com/img/Employee.jpg" class="img-responsive" alt="">
+          </div>
+          <div class="col-lg-7">
+            <ul>
+              <li class="employee-management-li-p-text-style">Control employee login/roles/permissions etc.</li>
+							<li class="employee-management-li-p-text-style">Record employee family contact info for emergency situations.</li>
+							<li class="employee-management-li-p-text-style">Record employee signature for auto signing.</li>
+							<li class="employee-management-li-p-text-style">Record employee skills, certifications, qualification, work history etc.</li>
+							<li class="employee-management-li-p-text-style">Record state issued identification details.</li>
+							<li class="employee-management-li-p-text-style">Wish employees on their Birthdays and Anniversaries.</li>
+							<li class="employee-management-li-p-text-style">Mark employee as sales representative.</li>
+							<li class="employee-management-li-p-text-style">Sell through Channel Sales Partners.</li>
+							<li class="employee-management-li-p-text-style">Monitor any kind of Employee Theft.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="coupon-sticker-label-printing" class="appear section">
+		<div class="container">
+			<div class="row">								
+				<div class="wow bounceIn align-center coupon-sticker-label-printing-heading-color">
+					<h1>Coupon/Sticker/Label Printing</h1>
+					<div class="coupon-sticker-label-printing-heading-line"></div>
+				</div><br />
+				<p class="coupon-sticker-label-printing-p-text-style">Add stickers/labels to your business for building brand image as well as having high quality presentation. You can design any kind of sticker template as you need which derives its text dynamically from data fields stored in database. Print stickers in A4 sheets as well as Sticker Rolls (Any Cut Size).</p>
+			</div><br />
+			<div class="row left-right-mrg">	
+				<div class="col-lg-12 coupon-sticker-label-printing-border">
+					<div class="col-lg-6 coupon-sticker-label-printing-slider">						
+						<div id="ninja-slider1" style="float:left;">
+							<div class="slider-inner">
+								<ul>
+									<li><a class="ns-img" href="http://billingregister.com/img/Labels%2065.png"></a></li>
+									<li><a class="ns-img" href="http://billingregister.com/img/Labels%2033.png"></a></li>
+									<li><a class="ns-img" href="http://billingregister.com/img/Address.png"></a></li>
+									<li><a class="ns-img" href="http://billingregister.com/img/Roll.jpg"></a></li>
+									<li><a class="ns-img" href="http://billingregister.com/img/envelop%20label.jpg"></a></li>
+									<li><a class="ns-img" href="http://billingregister.com/img/envelop%20sticker.jpg"></a></li>
+								</ul>
+								<div class="fs-icon" title="Expand/Close"></div>
+							</div>
+						</div>						
+					</div>
+					<div class="col-lg-6 coupon-sticker-label-printing">
+						<ul>	
+							<li>Design your own stickers within the software.</li>
+							<li>Design address labels for pasting on files, letters and cards.</li>
+							<li>Design Items labels for pasting as Item-Description Stickers.</li>
+							<li>Design Item Dispatch Stickers having address, item detail and dates.</li>
+							<li>Design Cash Coupons redeemable by end user.</li>
+							<li>Derive information from Organization, Customers, Items etc.</li>
+							<li>Mark any field-value as Barcode. Dynamic Width.</li>	
+							<li>Display Price (MRP, LP etc.), and Tax info vertically oriented.</li>
+							<li>Print on Multi-Column Rolls and design stationery as available.</li>
+							<li>Print on A4-Size Pre-Cut Sticker Sheets. Unlimited Stationery.</li>
+							<li>Reuse A-4 Sheets if partially used last time.</li>
+							<li>Pre-Loaded mostly available sticker stationeries.</li>
+							<li>Design your own custom stationery and sticker accordingly.</li>
+							<li>Set font size/weight/color and text formatting.</li>
+							<li>Dynamic text alignment, margins and orientation.</li>
+							<li>Load Image as background for better graphics.</li>
+							<li>Works with all printers. Just map printer with stationery.</li>
+							<li>Set margins in template according to printer capabilities.</li>							
+						</ul>
+					</div>						
+				</div>	
+			</div>
+		</div>
+	</section>	
+
+
+  <section id="robust-book-keeping">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 robust-book-keeping-border">
+          <br>
+          <div class="robust-book-keeping-header">
+            <h1>Robust Book Keeping</h1>
+            <div class="robust-book-keeping-hr"></div>
+          </div>
+          <br>
+          <div class="robust-book-keeping-paragraph">
+            <p class="p-text-style">A complete and thorough module is available for book keeping. Journal Entries can be passed, and posted to ledgers. Transaction wise ledger view is available. Data is viewable as per chosen financial year. Final Accounts i.e. Trial Balance, Trading Account, Profit & Loss Account and Balance Sheet are available. Auto calculation of depreciation on fixed assets is also available.</p>
+          </div>
+          <br>
+          <div class="col-lg-5 robust-book-keeping-img">
+            <img src="https://billingregister.com/img/book-keeping.jpg" alt="" class="img-responsive">
+          </div>
+          <div class="col-lg-7">
+            <ul class="robust-book-keeping-list">
+              <li class="robust-book-keeping-li-p-text-style">Maintain accounting data into hierarchy of Super-Groups, Groups, and Ledgers.</li>
+              <li class="robust-book-keeping-li-p-text-style">Supports Contra-Ledgers and Sub-Ledger.</li>
+              <li class="robust-book-keeping-li-p-text-style">Journal Entries can be copied for quick entry.</li>
+              <li class="robust-book-keeping-li-p-text-style">Bulk copy of Journal Entries.</li>
+              <li class="robust-book-keeping-li-p-text-style">Ledger shows Transaction wise balances.</li>
+              <li class="robust-book-keeping-li-p-text-style">Look at Day Wise and Monthly Balances.</li>
+              <li class="robust-book-keeping-li-p-text-style">Quickly change Accounting Groups and Super Groups.</li>
+              <li class="robust-book-keeping-li-p-text-style">Merge Ledgers for concise account heads.</li>
+              <li class="robust-book-keeping-li-p-text-style">Definable Checks to control bad account balances (Esp. Negative Cash).</li>
+              <li class="robust-book-keeping-li-p-text-style">Supports multiple financial years in single file.</li>
+              <li class="robust-book-keeping-li-p-text-style">Nice View of Final Accounts i.e. Trial Balance, Trading Account, Profit &amp; Loss Account and Balance Sheet.</li>
+              <li class="robust-book-keeping-li-p-text-style">Auto calculation of depreciation on fixed assets.</li>
+              <li class="robust-book-keeping-li-p-text-style">Export to excel available at all levels.</li>
+              <li class="robust-book-keeping-li-p-text-style">Search records based on multiple parameters available at all levels.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="price" class="appear section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 price-list1">
+          <div class="price-padding">
+            <div class="price-list1-header">
+              <p>Price - $20 Per Year</p>
+              <div class="price-list1-hr"></div>
+            </div>
+            <p class="price-list1-sub-heading">(For Non-Indian Customer Only)</p>
+            <div class="price-paypal-style">
+              <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                <input type="hidden" name="cmd" value="_s-xclick">
+                <input type="hidden" name="hosted_button_id" value="YMRRP32FL7BLS">
+                <input type="image" class="" src="https://www.paypalobjects.com/en_GB/i/btn/btn_subscribeCC_LG.gif" name="submit" alt="PayPal - The safer, easier way to pay onlinimg-responsive!">
+                <img alt="" class="img-responsive" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+              </form>
+              <p class="price-p-style">(Pay Using PayPal)</p>
+            </div>
+            <p class="price-list1-paragraph">After completing your transaction, please share your transaction detail with Billing Register team at any of the provided contact number or email. You will be issued a fresh license key or existing license key will be renewed within 24-Hours.</p>
+          </div>
+        </div>
+        <div class="col-lg-6 price-list1">
+          <div class="price-padding">
+            <div class="price-list1-header">
+              <p>Price - Rs. 1180/- Per Year</p>
+              <div class="price-list1-hr"></div>
+            </div>
+            <p class="price-list1-sub-heading">(For Indian Customer Only)</p>
+            <div class="price-paypal-style2">
+              <img class="img-responsive price-img" src="https://billingregister.com/img/GooglePayQRCode.jpg" alt="Google Pay QR Code">						    
+              <p class="price-p-style2">(Google Pay QR Code)</p>
+            </div>
+            <p class="price-list1-paragraph">After completing your transaction, please share your transaction detail with Billing Register team at any of the provided contact number or email. You will be issued a fresh license key or existing license key will be renewed within 24-Hours.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="appear section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 contact-border">
+          <br>
+          <div class="contact-header">
+            <h1>Contact for <span style="color: #fff; background:#3491FF">Professional Support</span></h1>
+            <div class="contact-hr"></div>
+          </div>
+          <p class="contact-subheading">To set up software for yourself, are you looking for a professional help?</p>
+          <div>
+            <div class="contact col-lg-12">
+              <ul class="contact-lists">
+                <li class="contact-li-p-text-style">To make sure that taxes are setup right?</li>
+                <li class="contact-li-p-text-style">To make sure inventory is setup properly?</li>
+                <li class="contact-li-p-text-style">To make sure that taxes are setup right?</li>
+                <li class="contact-li-p-text-style">To make sure inventory is setup properly?</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-12 padding">
+            <div class="col-lg-7">
+              <img class="contact-img img-responsive" src="https://billingregister.com/img/Software%20Installation.jpg" alt="">
+            </div>
+            <div class="contact-paragraph col-lg-5">
+              <p>Do not worry in case you don't have any person in your circle who can help you out in software installation/setup etc. We can help you finding an independent professional/agents having specialization in software installation and setting up system as per your business needs. Such professional can also take care of all statutory compliance. Such technical support professionals are provided at supper affordable price, so that there is no hiccup in getting software installed/configured right as per your specific needs. After software installation and training, you may come across variety of questions as the time passes by. Keep asking them any kind of questions and they will never mind answering.</p>
+            </div>
+            <div class="contact-paragraph">
+              <p>For installation work, our agents/professionals use anydesk/zoom to conduct online meetings which are free apps and can be downloaded from <a href="https://www.anydesk.com/" class="contact-a-style" target="_blank">www.anydesk.com</a> and <a href="www.zoom.us" class="contact-a-style" target="_blank">www.zoom.us</a> respectively. During these meetings, you should be able to show your computer screen and pass on proper computer control so that our agent can perform the job properly. Before this meeting, our agent will discuss business details with you, collect information like Business Name/Address, Tax Details, and Inventory etc. After setting up everything as per your requirement, you can hire agents to get yourself trained on how to use software as per your business needs. After this training, you can come across different queries as the time passes by. Please keep asking any question, and these agents will never hesitate answering your queries.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="customization" class="appear section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 customization-padding">
+          <br>
+          <div class="customization-header">
+            <h1>Contact for Software Customization Work</h1>
+            <div class="customization-hr"></div>
+          </div>
+          <p class="customization-sub-heading">Are you looking for a professional help?</p>
+          <div class="col-lg-6">
+            <ul class="customization-lists">
+              <li class="customization-li-text-style">To make sure that Billing Register meets all your customized needs?</li>
+              <li class="customization-li-text-style">To meet a special situation, that no other software meets generally?</li>
+            </ul>
+          </div>
+          <div class="col-lg-6">
+            <ul class="customization-lists">
+              <li class="customization-li-text-style">To make sure that all business features are packed into a single piece of software?</li>
+              <li class="customization-li-text-style">To make sure that ultimately you win?</li>
+            </ul>
+          </div>
+          <div class="col-lg-7">
+            <img src="https://billingregister.com/img/Software%20Customization.jpg" class="customization-img1 img-responsive" alt="">
+          </div>
+          <div class="col-lg-5">
+            <p class="customization-p-text-style">We are always here to hear you out, to give value to your special needs, and to help you in fulfilling all your professional desires.</p>
+            <p class="customization-p-text-style">We understand that customization of a software can be a big cost head for any business and most businesses avoid this because of affordability issue. Trust us, we always offer super affordable cost-plans to fulfil your software customization related requirements. Don't hesitate discussing your software customization related queries.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="downloads" class="appear section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 downloads-padding">
+          <br>
+          <br>
+          <div class="downloads-header">
+            <h1>Download Billing Register Software</h1>
+            <div class="downloads-hr"></div>
+          </div>
+          <br>
+          <br>
+          <div class="col-lg-6">
+            <div class="downloads1">
+              <ul>
+                <li style="margin-bottom:20px;">
+                  <a href="" style="font-size:28px; font-weight:500;" class="downloads1-header">Contact for Installation</a>
+                </li>
+                <li>
+                  <a class="br-red-style">
+                    Billing Register is an enterprise level software.
+                    <br>
+                    Get it installed by an authorised agent only. 
+                    <br>
+                    Installation charges are quite minimal.
+                  </a>
+                </li>
+                <li>
+                  <a class="br-blue-style">Version: 1.71</a>
+                </li>
+                <li>
+                  <a class="br-blue-style">User Password: 123</a>
+                </li>
+                <li>
+                  <a href="https://billingregister.com/setup/installer/Billing Register Web Installer.exe" download=""><button class="d-btn"><i class="fa fa-download"></i> Download Web Installer</button></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="downloads2">
+              <ul>
+                <li class="downloads2-header">System Requirements:</li>
+                <li class="downloads2-li">Runs on Windows 10 and Windows 11</li>
+                <li class="downloads2-li">Needs MS Access (Full | Runtime) (2016 | 365)</li>
+                <li class="downloads2-li">DotNet Framework (4.8)</li>
+                <li class="downloads2-li">Supports Both 32 Bit | 64 Bit Environments</li>
+                <li class="downloads2-li">Requires Minimum 4 GB RAM (12 GB Preferred)</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-12">
+            <div class="files-links">
+              <ul>
+                <li class="files-links-header">Extra Supporting Files or Links</li>
+                <ul class="col-lg-6 files-links-list1">
+                  <li>
+                    <a href="https://billingregister.com/setup/1.71/32.zip"  class="action_button" download>Billing Register (32Bit)</a>
+                  </li>
+                  <li>
+                    <a href="https://billingregister.com/setup/1.71/64.zip"  class="action_button" download>Billing Register (64Bit)</a>
+                  </li>
+                  <li>
+                    <a href="https://billingregister.com/setup/1.71/DB.zip"  class="action_button-speical1" download>Database</a>
+                  </li>
+                  <div class="files-links-hr"></div>
+                  <li>
+                    <a href="https://billingregister.com/setup/KPI Emailer/BR KPI Emailer.accdb"  class="action_button-speical2" download>Bussiness KPI Emailer (OPEN SOURCE)</p></a>
+                  </li>
+                  <ul class="emailer">
+                    <li class="files-links-li">Save in folder where Billing Register frontend is located.</li>
+                    <li class="files-links-li">Runs with MS-Access 2016/365 (Runtime/Full Version).</li>
+                    <li class="files-links-li">Needs MS-Access 2016/365 Full Version if you want to make design level changes or want to modify the code.</li>
+                  </ul>
+                </ul>
+                <ul class="col-lg-6 files-links-list2">
+                  <li>
+                    <a href="https://go.microsoft.com/fwlink/?linkid=2088631" class="action_button" download>Download DotNet Framework 4.8 (Offline Installer)</a>
+                  </li>
+                  <li>
+                    <a href="https://dotnet.microsoft.com/en-us/download/dotnet-framework/thank-you/net48-web-installer" class="action_button" download>Download DotNet Framework 4.8 (Web Installer)</a>
+                  </li>
+                  <li>
+                    <a download><p class="action_button-speical1">Download WinRAR <a class="action_button" href="https://www.win-rar.com/postdownload.html?&f=wrar591.exe&spV=true&subD=true">32Bit</a> / <a class="action_button" href="https://www.win-rar.com/postdownload.html?&f=winrar-x64-591.exe&spV=true&subD=true">64Bit</a></a>
+                  </li>
+                  <div class="files-links-hr"></div>
+                  <li>
+                    <a href="https://www.microsoft.com/en-us/download/details.aspx?id=50040" class="action_button-speical2" download>Download MS Access 2016 Runtime 32/64 Bit (MSI)</a>
+                  </li>
+                  <li>
+                    <a href="https://support.office.com/en-us/article/download-and-install-office-365-access-runtime-185c5a32-8ba9-491e-ac76-91cbe3ea09c9" class="action_button" download>Download Office 365 Access Runtime 32/64 Bit (C2R)</a>
+                  </li>
+                  <li>
+                    <a href="https://docs.microsoft.com/en-us/deployoffice/install-different-office-visio-and-project-versions-on-the-same-computer/"  class="action_button" download>Determining your Office version - MSI vs. C2R</a>
+                  </li>
+                  <li>
+                    <a href="http://billingregister.com/setup/extratools/System Information.accdb"  class="action_button-speical1" download>Check Microsoft Access Version</a>
+                  </li>
+                  <div class="files-links-hr"></div>
+                  <li>
+                    <a href="https://www.microsoft.com/en-us/download/confirmation.aspx?id=55390"  class="action_button-speical2" download>MS Office 2016 32Bit Update to fix crashing on creating PDF</a>
+                  </li>
+                  <li>
+                    <a href="https://www.microsoft.com/en-us/download/confirmation.aspx?id=55394"  class="action_button" download>MS Office 2016 64Bit Update to fix crashing on creating PDF</a>
+                  </li>
+                </ul>
+              </ul>
+            </div>
+          </div>
+          <div class="install col-lg-12" style="padding-right: 0;padding-left: 0;">
+            <p class="install-subheading">How to install Billing Register</p>
+            <div class="col-lg-12 video-align" style="text-align: center">
+              <iframe
+                class="installation-video"
+                src="https://www.youtube.com/embed/flS8R75eWP0/"
+              ></iframe>
+            </div>
+            <p class="install-paragraph">This video gives complete insight about How to install Billing Register.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="br-contact" class="appear section">
+    <div class="container">
+      <div class="row left-right-mrg">
+        <div class="col-lg-12 demo-border"><br />
+          <div class="allign-center contact-mrg demo-heading-color">
+						<h1>Contact Us</h1>
+						<div class="demo-heading-line"></div>
+					</div>
+					<div id="br-contact" class="col-lg-12 div icon-style" style="margin: 0 auto;">
+						<div class="a-style">
+							<div class="figure-style">
+								<a href="">
+									<img class="img-style" src="http://billingregister.com/img/phonei2.png" alt="">
+								</a>
+							</div>
+						</div>
+						<div class="a-style">
+							<div class="figure-style">
+								<a href="">
+									<img class="img-style" src="http://billingregister.com/img/whatsapp2.png" alt="">
+								</a>
+							</div>
+						</div>
+						<div class="a-style">
+							<div class="figure-style">
+								<a href="">
+									<img class="img-style" src="http://billingregister.com/img/viber2.png" alt="">
+								</a>
+							</div>
+						</div>
+						<div class="a-style">
+							<figure class="figure-style">
+								<a href="">
+									<img class="img-style" src="http://billingregister.com/img/emaili.png" alt="">
+								</a>
+							</figure>
+						</div>
+					</div>
+        </div>		
+      </div>
+    </div>
+  </section>
+
+  <section id="footer" class="footer">
+    <div id="wrap">
+      <section id="one">
+        <section id="two">
+          <section id="three">
+            <section id="four">
+              <section id="five">
+                <div class="col-xs-12">
+                  <div class="footer-logo-style">
+                    <a href="http://www.erpmakers.com/" target="_blank">
+                      <img src="http://www.billingregister.com/img/erplogo.png" alt="Logo" class="footer-icon img-responsive">
+                    </a>
+                    <p class="footer-p-text-style">
+                      <a href="http://www.erpmakers.com/" target="_blank">A Product by ERP MAKERS</a>
+                    </p>
+                  </div>
+                </div>
+              </section>
+            </section>
+          </section>
+        </section>
+      </section>
+    </div>
+  </section>
+
+  <section id="end">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 keywords-cluster-padding">
+          <p id="end-p-text-style">
+            Billing Register, Billing Software, Invoicing Software, Accounting Software, CRM Solution, POS, Point of Sale, Cash Register, Barcoding Software, Business Software, Software for Retail Business, Software for Wholesale Business, Software for Supermarket, Software for Trading Company, Software for Manufacturing Business, Software for Engineering Services
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+     <script type ="text/javascript" language ="javascript" src="js/dec.js" ></script> 
+	  <script type ="text/javascript" language ="javascript" src="js/ninja-slider.js"></script> 
+    <script type ="text/javascript" language ="javascript" src="js/jquery.js"></script> 
+    <script type ="text/javascript" language ="javascript" src="js/bootstrap.min.js"></script>
+    <!-- <script type ="text/javascript" language ="javascript" src="js/main.js"></script> -->
+     <script type ="text/javascript" language ="javascript" src="js/wow.min.js"></script>
+    <script>    
+      $(document).click(function (event) {
+        var clickover = $(event.target);
+        var $navbar = $(".navbar-collapse");               
+        var _opened = $navbar.hasClass("in");
+        if (_opened === true && !clickover.hasClass("collapsing")) {      
+          $navbar.collapse('hide');
+        }
+      });
+  
+      $(document).ready(function(){
+        var Ispaused=false; $(".pause").click(function(){
+          if (Ispaused) {
+            $("#carousel-slider").carousel('cycle'); 
+            Ispaused = false; 
+          }
+          else {	
+            $("#carousel-slider").carousel('pause'); 
+            Ispaused = true; 
+          }
+        });	
+      });	
+    </script>
+  </body>
+  
+</html>
