@@ -646,7 +646,7 @@
       }
       figure{
         list-style-image: url('camera.png');
-
+        background-color: white;
       }
       .fa-laptop{
         font-size: 4.5em;
@@ -657,8 +657,13 @@
         display: inline-block;        
         list-style-image: url('camera.png');
         box-sizing: border-box;
-        height: 100px;
+        height: 95px;
         width: 100px;
+        transition-property: transform;
+        transition-duration: 1s;
+      }
+      .fa-laptop:hover{
+        transform: rotate(360deg);
       }
       .fa-money{
         font-size: 4.5em;
@@ -669,8 +674,13 @@
         display: inline-block;
         list-style-image: url('camera.png');
         box-sizing: border-box;
-        height: 100px;
+        height: 95px;
         width: 100px;
+        transition-property: transform;
+        transition-duration: 1s;
+      }
+      .fa-money:hover{
+        transform: rotate(360deg);
       }
       .fa-truck{
         font-size: 4.5em;
@@ -681,8 +691,14 @@
         display: inline-block;        
         list-style-image: url('camera.png');
         box-sizing: border-box;
-        height: 100px;
+        height: 95px;
         width: 100px;
+        transition-property: transform;
+        transition-duration: 0.6s;
+        transition-timing-function: ease-in;
+      }
+      .fa-truck:hover{
+        transform: rotate(360deg);
       }
       #misc1{
         padding-top: 90px;
@@ -723,35 +739,54 @@
       .fa-calendar{
         font-size: 80px;
         color: #417630;
-        display: inline-block;        
-        list-style-image: url('camera.png');
+        display: inline-block;
+        list-style-image: url(camera.png);
         box-sizing: border-box;
         text-align: center;
         position: relative;
-        padding-left: 31px;
-        padding-top: 22px;
+        height: 128px;
+        width: 136px;
+        padding-top: 21px;
+        transition-property: transform;
+        transition-duration: 1s;
+      }
+      .fa-calendar:hover{
+        transform: rotate(360deg);
       }
       .fa-search{
         font-size: 80px;
-        line-height: 100px;
         color: #417630;
-        display: inline-block;        
-        list-style-image: url('camera.png');
+        display: inline-block;
+        list-style-image: url(camera.png);
         box-sizing: border-box;
         text-align: center;
         position: relative;
-        padding-left: 28px;
-        padding-top: 15px;
+        height: 128px;
+        width: 134px;
+        padding-top: 21px;
+        transition-property: transform;
+        transition-duration: 1s;
       }
-      .fa-barcode{
+      .fa-search:hover{
+        transform: rotate(360deg);
+      }
+      .fa-barcode {
         font-size: 80px;
-        line-height: 100px;
         color: #417630;
-        display: inline-block;        
-        list-style-image: url('camera.png');
+        display: inline-block;
+        list-style-image: url(camera.png);
         box-sizing: border-box;
-        padding-left: 28px;
-        padding-top: 17px;
+        text-align: center;
+        position: relative;
+        height: 128px;
+        width: 136px;
+        padding-top: 26px;
+        padding-left: 2px;
+        transition-property: transform;
+        transition-duration: 1s;
+      }
+      .fa-barcode:hover{
+        transform: rotate(360deg);
       }
       .source-col:hover{
         background-color: #dfe8db;
